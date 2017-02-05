@@ -1,25 +1,28 @@
 <link href="the_black_hack.css" rel="stylesheet" title="Default Style">
 <img src="bh_logo_long.png"/>
 <div class="attrBox">
-  <table border=2 cellpadding=1>
+  <table cellpadding=3>
     <tr>
       <td class="tdattrlabel">NAME</td>
-      <td><input type=text width="5" name="attr_NAME"/></td>
+      <td><input type="text" class="sheet-text" name="attr_NAME"/></td>
     </tr>
     <tr>
       <td class="tdattrlabel">LEVEL</td>
-      <td><input type=number width=5 name="attr_LEVEL"/></td>
+      <td><input type=number class="sheet-short" name="attr_LEVEL"/></td>
     </tr>
   </tabLe>
 </div>
 <div class="attrBox">
-  <table border=2 cellpadding=1>
-    <th></th>
-    <th></th>
-    <th class="tdattrlabel">Roll</th>
+  <table cellpadding=2>
     <tr>
-      <td class="tdattrlabel">STR</td>
-      <td><input type=number size="2" name="attr_STR"/></td>
+      <th class="tdattrlabel" colspan="2">Attr</th>
+      <th class="tdattrlabel">Roll</th>
+    </tr>
+    <tr>
+      <td><div class="tdattrlabel" >STR</div></td>
+      <td>
+        <input type=number size="2" class="sheet-short" name="attr_STR"/>
+      </td>
       <td class="sheet-center">
         <button class="sheet-button"
                 type="roll"
@@ -46,7 +49,7 @@
     </tr>
     <tr>
       <td class="tdattrlabel">DEX</td>
-      <td><input type=number width=5 name="attr_DEX"/></td>
+      <td><input type=number class="sheet-short" name="attr_DEX"/></td>
       <td class="sheet-center">
         <button class="sheet-button"
                 type="roll"
@@ -73,7 +76,7 @@
     </tr>
     <tr>
       <td class="tdattrlabel">CON</td>
-      <td><input type=number width=5 name="attr_CON"/></td>
+      <td><input type=number class="sheet-short" name="attr_CON"/></td>
       <td class="sheet-center">
         <button class="sheet-button"
                 type="roll"
@@ -100,7 +103,7 @@
     </tr>
     <tr>
       <td class="tdattrlabel">WIS</td>
-      <td><input type=number width=5 name="attr_WIS"/></td>
+      <td><input type=number class="sheet-short" name="attr_WIS"/></td>
       <td class="sheet-center">
         <button class="sheet-button"
                 type="roll"
@@ -127,7 +130,7 @@
     </tr>
     <tr>
       <td class="tdattrlabel">INT</td>
-      <td><input type=number width=5 name="attr_INT"/></td>
+      <td><input type=number class="sheet-short" name="attr_INT"/></td>
       <td class="sheet-center">
         <button class="sheet-button"
                 type="roll"
@@ -154,7 +157,7 @@
     </tr>
     <tr>
       <td class="tdattrlabel">CHA</td>
-      <td><input type=number width=5 name="attr_CHA"/></td>
+      <td><input type=number class="sheet-short" name="attr_CHA"/></td>
       <td class="sheet-center">
         <button class="sheet-button"
                 type="roll"

@@ -9,4 +9,14 @@ body {
 .attrBox {
     border: solid;
     border-color: white;
+    border-width: 2;
+    width: 900px;
+}
+input.sheet-text {
+    height: 30px;
+    width: 20m;
+}
+input.sheet-short {
+    height: 30px;
+    width: 4em;
 }
