@@ -6,3 +6,7 @@ body {
     color: White;
     font-size: 30px;
 }
+.attrBox {
+    border: solid;
+    border-color: white;
+}

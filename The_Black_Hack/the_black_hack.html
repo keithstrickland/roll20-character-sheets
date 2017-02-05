@@ -1,29 +1,184 @@
 <link href="the_black_hack.css" rel="stylesheet" title="Default Style">
 <img src="bh_logo_long.png"/>
-<table width=100% border=0 cellpadding=5 >
-  <!-- character attributes-->
-  <tr>
-    <td class="tdattrlabel">NAME</td>
-    <td><input type=text width="5" name="attr_NAME"/></td>
-    <td class="tdattrlabel">LEVEL</td>
-    <td><input type=number width=5 name="attr_LEVEL"/></td>
-  </tr>
-  <tr>
-    <td class="tdattrlabel">STR</td>
-    <td><input type=number width=5 name="attr_STR"/></td>
-    <td class="tdattrlabel">DEX</td>
-    <td><input type=number width=5 name="attr_DEX"/></td>
-  </tr>
-  <tr>
-    <td class="tdattrlabel">CON</td>
-    <td><input type=number width=5 name="attr_CON"/></td>
-    <td class="tdattrlabel">WIS</td>
-    <td><input type=number width=5 name="attr_WIS"/></td>
-  </tr>
-  <tr>
-    <td class="tdattrlabel">INT</td>
-    <td><input type=number width=5 name="attr_INT"/></td>
-    <td class="tdattrlabel">CHA</td>
-    <td><input type=number width=5 name="attr_CHA"/></td>
-  </tr>
-</tabLe>
+<div class="attrBox">
+  <table border=2 cellpadding=1>
+    <tr>
+      <td class="tdattrlabel">NAME</td>
+      <td><input type=text width="5" name="attr_NAME"/></td>
+    </tr>
+    <tr>
+      <td class="tdattrlabel">LEVEL</td>
+      <td><input type=number width=5 name="attr_LEVEL"/></td>
+    </tr>
+  </tabLe>
+</div>
+<div class="attrBox">
+  <table border=2 cellpadding=1>
+    <th></th>
+    <th></th>
+    <th class="tdattrlabel">Roll</th>
+    <tr>
+      <td class="tdattrlabel">STR</td>
+      <td><input type=number size="2" name="attr_STR"/></td>
+      <td class="sheet-center">
+        <button class="sheet-button"
+                type="roll"
+                name="attr_StrengthSave-roll"
+                title="%{selected|StrengthSave-roll}"
+                value="&{template:general} {{name=@{character_name}}} {{subtag=Strength Save}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
+          <img src="d20_blank.png" width="40" height="40" alt="normal"/>
+        </button>
+        <button class="sheet-button"
+                type="roll"
+                name="attr_StrengthSave-roll"
+                title="%{selected|StrengthSave-roll}"
+                value="&{template:general} {{name=@{character_name}}} {{subtag=Strength Save}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
+          <img src="d20_adv.png" width="40" height="40" alt="advantage"/>
+        </button>
+        <button class="sheet-button"
+                type="roll"
+                name="attr_StrengthSave-roll"
+                title="%{selected|StrengthSave-roll}"
+                value="&{template:general} {{name=@{character_name}}} {{subtag=Strength Save}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
+          <img src="d20_dis.png" width="40" height="40" alt="disadvantage"/>
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td class="tdattrlabel">DEX</td>
+      <td><input type=number width=5 name="attr_DEX"/></td>
+      <td class="sheet-center">
+        <button class="sheet-button"
+                type="roll"
+                name="attr_StrengthSave-roll"
+                title="%{selected|StrengthSave-roll}"
+                value="&{template:general} {{name=@{character_name}}} {{subtag=Strength Save}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
+          <img src="d20_blank.png" width="40" height="40" alt="normal"/>
+        </button>
+        <button class="sheet-button"
+                type="roll"
+                name="attr_StrengthSave-roll"
+                title="%{selected|StrengthSave-roll}"
+                value="&{template:general} {{name=@{character_name}}} {{subtag=Strength Save}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
+          <img src="d20_adv.png" width="40" height="40" alt="advantage"/>
+        </button>
+        <button class="sheet-button"
+                type="roll"
+                name="attr_StrengthSave-roll"
+                title="%{selected|StrengthSave-roll}"
+                value="&{template:general} {{name=@{character_name}}} {{subtag=Strength Save}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
+          <img src="d20_dis.png" width="40" height="40" alt="disadvantage"/>
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td class="tdattrlabel">CON</td>
+      <td><input type=number width=5 name="attr_CON"/></td>
+      <td class="sheet-center">
+        <button class="sheet-button"
+                type="roll"
+                name="attr_StrengthSave-roll"
+                title="%{selected|StrengthSave-roll}"
+                value="&{template:general} {{name=@{character_name}}} {{subtag=Strength Save}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
+          <img src="d20_blank.png" width="40" height="40" alt="normal"/>
+        </button>
+        <button class="sheet-button"
+                type="roll"
+                name="attr_StrengthSave-roll"
+                title="%{selected|StrengthSave-roll}"
+                value="&{template:general} {{name=@{character_name}}} {{subtag=Strength Save}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
+          <img src="d20_adv.png" width="40" height="40" alt="advantage"/>
+        </button>
+        <button class="sheet-button"
+                type="roll"
+                name="attr_StrengthSave-roll"
+                title="%{selected|StrengthSave-roll}"
+                value="&{template:general} {{name=@{character_name}}} {{subtag=Strength Save}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
+          <img src="d20_dis.png" width="40" height="40" alt="disadvantage"/>
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td class="tdattrlabel">WIS</td>
+      <td><input type=number width=5 name="attr_WIS"/></td>
+      <td class="sheet-center">
+        <button class="sheet-button"
+                type="roll"
+                name="attr_StrengthSave-roll"
+                title="%{selected|StrengthSave-roll}"
+                value="&{template:general} {{name=@{character_name}}} {{subtag=Strength Save}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
+          <img src="d20_blank.png" width="40" height="40" alt="normal"/>
+        </button>
+        <button class="sheet-button"
+                type="roll"
+                name="attr_StrengthSave-roll"
+                title="%{selected|StrengthSave-roll}"
+                value="&{template:general} {{name=@{character_name}}} {{subtag=Strength Save}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
+          <img src="d20_adv.png" width="40" height="40" alt="advantage"/>
+        </button>
+        <button class="sheet-button"
+                type="roll"
+                name="attr_StrengthSave-roll"
+                title="%{selected|StrengthSave-roll}"
+                value="&{template:general} {{name=@{character_name}}} {{subtag=Strength Save}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
+          <img src="d20_dis.png" width="40" height="40" alt="disadvantage"/>
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td class="tdattrlabel">INT</td>
+      <td><input type=number width=5 name="attr_INT"/></td>
+      <td class="sheet-center">
+        <button class="sheet-button"
+                type="roll"
+                name="attr_StrengthSave-roll"
+                title="%{selected|StrengthSave-roll}"
+                value="&{template:general} {{name=@{character_name}}} {{subtag=Strength Save}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
+          <img src="d20_blank.png" width="40" height="40" alt="normal"/>
+        </button>
+        <button class="sheet-button"
+                type="roll"
+                name="attr_StrengthSave-roll"
+                title="%{selected|StrengthSave-roll}"
+                value="&{template:general} {{name=@{character_name}}} {{subtag=Strength Save}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
+          <img src="d20_adv.png" width="40" height="40" alt="advantage"/>
+        </button>
+        <button class="sheet-button"
+                type="roll"
+                name="attr_StrengthSave-roll"
+                title="%{selected|StrengthSave-roll}"
+                value="&{template:general} {{name=@{character_name}}} {{subtag=Strength Save}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
+          <img src="d20_dis.png" width="40" height="40" alt="disadvantage"/>
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td class="tdattrlabel">CHA</td>
+      <td><input type=number width=5 name="attr_CHA"/></td>
+      <td class="sheet-center">
+        <button class="sheet-button"
+                type="roll"
+                name="attr_StrengthSave-roll"
+                title="%{selected|StrengthSave-roll}"
+                value="&{template:general} {{name=@{character_name}}} {{subtag=Strength Save}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
+          <img src="d20_blank.png" width="40" height="40" alt="normal"/>
+        </button>
+        <button class="sheet-button"
+                type="roll"
+                name="attr_StrengthSave-roll"
+                title="%{selected|StrengthSave-roll}"
+                value="&{template:general} {{name=@{character_name}}} {{subtag=Strength Save}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
+          <img src="d20_adv.png" width="40" height="40" alt="advantage"/>
+        </button>
+        <button class="sheet-button"
+                type="roll"
+                name="attr_StrengthSave-roll"
+                title="%{selected|StrengthSave-roll}"
+                value="&{template:general} {{name=@{character_name}}} {{subtag=Strength Save}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
+          <img src="d20_dis.png" width="40" height="40" alt="disadvantage"/>
+        </button>
+      </td>
+    </tr>
+  </tabLe>
+</div>
+

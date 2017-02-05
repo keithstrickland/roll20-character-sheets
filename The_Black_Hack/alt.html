@@ -1,0 +1,59 @@
+<div class="sheet-personal_attributes">
+  <table class="sheet-sect">
+    <tr>
+      <td>
+        <table>
+          <tr>
+            <td class="sheet-center">NAME</td>
+            <td><input type="text" class="sheet-input-medium" name="attr_character_name" title="@{character_name}" placeholder="Character Name" /></td>
+            <td class="sheet-center">LEVEL</td>
+            <td><input type="text" class="sheet-input-medium" name="attr_Level" title="@{character_Level}" placeholder="Warrior 1" /></td>
+          </tr>
+          <tr>
+            <td class="sheet-center"><button class="sheet-button" type="roll" name="attr_StrengthSave-roll" title="%{selected|StrengthSave-roll}" value="&{template:general} {{name=@{character_name}}} {{subtag=Strength Save}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}" >STR</button></td>
+            <td><input type="text" class="sheet-input-small" name="attr_Strength" title="@{Strength}" value="10" style="text-align:left; padding-left:9px;" /></td>
+            <td class="sheet-center"><button class="sheet-button" type="roll" name="attr_WisdomSave-roll" title="%{selected|WisdomSave-roll}" value="&{template:general} {{name=@{character_name}}} {{subtag=Wisdom Save}} {{1d20 Roll=[[1d20<@{WisdomSave}cf>@{WisdomSave}]] }}" >WIS</button></td>
+            <td><input type="text" class="sheet-input-small" name="attr_Wisdom" title="@{Wisdom}" value="10" style="text-align:left; padding-left:9px;" /></td>
+          </tr>
+          <tr>
+            <td class="sheet-center"><button class="sheet-button" type="roll" name="attr_DexteritySave-roll" title="%{selected|DexteritySave-roll}" value="&{template:general} {{name=@{character_name}}} {{subtag=Dexterity Save}} {{1d20 Roll=[[1d20<@{DexteritySave}cf>@{DexteritySave}]] }}" >DEX</button></td>
+            <td><input type="text" class="sheet-input-small" name="attr_Dexterity" title="@{Dexterity}" value="10" style="text-align:left; padding-left:9px;" /></td>
+            <td class="sheet-center"><button class="sheet-button" type="roll" name="attr_IntelligenceSave-roll" title="%{selected|IntelligenceSave-roll}" value="&{template:general} {{name=@{character_name}}} {{subtag=Intelligence Save}} {{1d20 Roll=[[1d20<@{IntelligenceSave}cf>@{IntelligenceSave}]] }}" >INT</button></td>
+            <td><input type="text" class="sheet-input-small" name="attr_Intelligence" title="@{Intelligence}" value="10" style="text-align:left; padding-left:9px;" /></td>
+          </tr>
+          <tr>
+            <td class="sheet-center"><button class="sheet-button" type="roll" name="attr_ConstitutionSave-roll" title="%{selected|ConstitutionSave-roll}" value="&{template:general} {{name=@{character_name}}} {{subtag=Constitution Save}} {{1d20 Roll=[[1d20<@{ConstitutionSave}cf>@{ConstitutionSave}]] }}" >CON</button></td>
+            <td><input type="text" class="sheet-input-small" name="attr_Constitution" title="@{Constitution}" value="10" style="text-align:left; padding-left:9px;" /></td>
+            <td class="sheet-center"><button class="sheet-button" type="roll" name="attr_CharismaSave-roll" title="%{selected|CharismaSave-roll}" value="&{template:general} {{name=@{character_name}}} {{subtag=Charisma Save}} {{1d20 Roll=[[1d20<@{CharismaSave}cf>@{CharismaSave}]] }}" >CHA</button></td>
+            <td><input type="text" class="sheet-input-small" name="attr_Charisma" title="@{Charisma}" value="10" style="text-align:left; padding-left:9px;" /></td>
+          </tr>
+          <tr>
+            <td class="sheet-center">HP</td>
+            <td><input type="number" class="sheet-input-small" name="attr_HitPoints" title="@{HitPoints}" value="1" style="text-align:left; padding-left:9px;" /></td>
+          </tr>
+          <tr>
+            <td class="sheet-center">HIT DIE</td>
+            <td><input type="text" class="sheet-input-small" name="attr_HitDie" title="@{HitDie}" value="1" style="text-align:left; padding-left:9px;" /></td>
+          </tr>
+          <tr>
+            <td class="sheet-center">ATTACK DAMAGE</td>
+            <td class="sheet-center"><button class="sheet-button" type="roll" name="attr_AttackDamage-roll" title="%{selected|NormalDamage-roll}" value="&{template:general} {{name=@{character_name}}} {{subtag=Attack Damage}} {{1d6 Roll=[[1d6<@{AttackDamage}cf>@{AttackDamage}]] }}" >1d6</button></td>
+            <td class="sheet-center">UNARMED / IMPROVISED DAMAGE</td>
+            <td class="sheet-center"><button class="sheet-button" type="roll" name="attr_UnarmedImprovisedDamage-roll" title="%{selected|UnarmedImprovisedDamage-roll}" value="&{template:general} {{name=@{character_name}}} {{subtag=Unarmed/Improvised Damage}} {{1d4 Roll=[[1d4<@{UnarmedImprovisedDamage}cf>@{UnarmedImprovisedDamage}]] }}" >1d4</button></td>
+          </tr>
+          <tr>
+            <td class="sheet-center">ENCUMBRANCE - You can carry a number of items equal to your STR. Carrying more means all tests have Disadvantage.</td>
+          </tr>
+          <tr>
+            <td class="sheet-center">AMMUNITION</td>
+            <td class="sheet-center"><button class="sheet-button" type="roll" name="attr_AmmunitionUsageDie-roll" title="%{selected|AmmunitionUsageDie-roll}" value="&{template:general} {{name=@{character_name}}} {{subtag=Ammunition Usage Die}} {{1d10 Roll=[[1d10<@{AmmunitionUsageDie}cf>@{AmmunitionUsageDie}]] }}" >1d10</button></td>
+            <td class="sheet-center">RATIONS</td>
+            <td class="sheet-center"><button class="sheet-button" type="roll" name="attr_RationsUsageDie-roll" title="%{selected|RationsUsageDie-roll}" value="&{template:general} {{name=@{character_name}}} {{subtag=Rations Usage Die}} {{1d8 Roll=[[1d8<@{RationsUsageDie}cf>@{RationsUsageDie}]] }}" >1d8</button></td>
+            <td class="sheet-center">TORCH</td>
+            <td class="sheet-center"><button class="sheet-button" type="roll" name="attr_TorchUsageDie-roll" title="%{selected|TorchUsageDie-roll}" value="&{template:general} {{name=@{character_name}}} {{subtag=Torch Usage Die}} {{1d6 Roll=[[1d6<@{TorchUsageDie}cf>@{TorchUsageDie}]] }}" >1d6</button></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>
