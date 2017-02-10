@@ -16,11 +16,11 @@ body {
     border: solid;
     border-color: white;
     border-width: 2;
-    width: 320px;
+    width: 330px;
 }
 input.sheet-text {
     height: 30px;
-    width: 20m;
+    width: 250px;
 }
 input.sheet-short {
     height: 30px;
