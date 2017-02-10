@@ -1,38 +1,53 @@
-body {
+div.sheet-all {
     background-color: black;
 }
-.tdattrlabel {
+.sheet-tdattrlabel {
     font-family: Arial Black;
-    color: White;
-    font-size: 30px;
+    color: white;
+    font-size: 20px;
 }
-.summaryBox {
+.sheet-summaryBox {
     border: solid;
     border-color: white;
     border-width: 2;
-    width: 960px;
+    width: 842px;
 }
-.attrBox {
+.sheet-attrBox {
     border: solid;
     border-color: white;
     border-width: 2;
-    width: 330px;
+    width: 430px;
+    padding: 2px 2px 2px 2px;
+}
+.sheet-charInfoBox {
+    border: solid;
+    border-color: white;
+    border-width: 2;
+    width: 402px;
+    padding: 2px 2px 2px 2px;
 }
 textarea.sheet-textarea {
-    height: 315px;
-    width:  400px;
+    height: 310px;
+    width:  390px;
     resize: none;
+    font-family: Arial Black;
+    font-size: 16px;
+    color: black;
+    margin: 5px 0px 0px 0px;
 }
 select.sheet-select {
     outline: 0;
     overflow: hidden;
     margin: 2px 0px 0px 0px;
-    padding: 5px 3px 5px 10px;
+    padding: 2px 3px 5px 10px;
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
     border-radius: 5px;    
     height: 30px;
     width: 100px;
+    font-family: Arial Black;
+    font-size: 16px;
+    color: black;
 }
 input.sheet-text {
     height: 30px;
