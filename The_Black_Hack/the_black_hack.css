@@ -6,11 +6,17 @@ body {
     color: White;
     font-size: 30px;
 }
+.summaryBox {
+    border: solid;
+    border-color: white;
+    border-width: 2;
+    width: 960px;
+}
 .attrBox {
     border: solid;
     border-color: white;
     border-width: 2;
-    width: 900px;
+    width: 320px;
 }
 input.sheet-text {
     height: 30px;
