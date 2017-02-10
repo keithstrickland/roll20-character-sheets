@@ -1,44 +1,39 @@
 div.sheet-all {
     background-color: black;
 }
+
 .sheet-tdattrlabel {
     font-family: Arial Black;
     color: white;
     font-size: 20px;
 }
+
 .sheet-summaryBox {
     border: solid;
     border-color: white;
     border-width: 2;
-    width: 840px;
-    margin: 1px;
+    margin: 0px 6px 1px 1px;
+    padding: 5px;
 }
-.sheet-attrBox {
+.sheet-box {
     border: solid;
     border-color: white;
     border-width: 2;
-    width: 426px;
-    padding: 2px 2px 2px 2px;
-    margin: 1px;
+    margin: 0px 0px 1px 1px;
+    padding: 5px;
 }
-.sheet-specialFeaturesBox {
-    border: solid;
-    border-color: white;
-    border-width: 2;
-    width: 399px;
-    padding: 2px 2px 2px 2px;
-    margin: 1px;
-}
+
 textarea, select, input {
     font-family: Arial Black;
     font-size: 16px;
     color: black;
 }
 textarea.sheet-textarea {
-    height: 310px;
-    width:  390px;
+    height: 305px;
+    width:  100%;
     resize: none;
-    margin: 5px 0px 0px 0px;
+    padding: 3px 0px 3px 2px;
+    margin: 3px 0px 0px 0px;
 }
 select.sheet-classSelect, select.sheet-hitDieSelect {
     outline: 0;
