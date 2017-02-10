@@ -7,7 +7,7 @@
         <td><input type="text" class="sheet-text" name="attr_NAME"/></td>
         <td class="tdattrlabel">CLASS</td>
         <td>
-          <select class="sheet-select" name="attr_CLASS">
+          <select class="sheet-classSelect" name="attr_CLASS">
             <option value="warrior">Warrior</option>
             <option value="thief">Thief</option>
             <option value="cleric">Cleric</option>
@@ -25,12 +25,21 @@
         <td><input type=number class="sheet-short" name="attr_HP"/></td>
         <td class="tdattrlabel">HIT DIE</td>
         <td>
-          <select class="sheet-select" name="attr_HD">
+          <select class="sheet-hitDieSelect" name="attr_HD">
             <option value="d4">d4</option>
             <option value="d6">d6</option>
             <option value="d8">d8</option>
             <option value="d10">d10</option>
             <option value="d12">d12</option>
+          </select>
+        </td>        
+        <td class="tdattrlabel">ATTACK DAMAGE</td>
+        <td>
+          <select class="sheet-attackDamageSelect" name="attr_ATTACK_DAMAGE">
+            <option value="1d4_1">1d4/1</option>
+            <option value="1d6_1d4">1d6/1d4</option>
+            <option value="1d8_1d4">1d8/1d4</option>
+            <option value="1d8_1d6">1d8/1d6</option>
           </select>
         </td>        
       </tr>
@@ -212,9 +221,9 @@
       </div>
     </div>
     <div class='sheet-col'>
-      <div class="charInfoBox">
-        <div class="tdattrlabel">CHARACTER INFORMATION</div>
-        <textarea class="sheet-textarea" name="attr_CHARINFO">Put character info here!</textarea>
+      <div class="specialFeaturesBox">
+        <div class="tdattrlabel">SPECIAL FEATURES</div>
+        <textarea class="sheet-textarea" name="attr_FEATURES">Put special features here!</textarea>
       </div>
     </div>
   </div>

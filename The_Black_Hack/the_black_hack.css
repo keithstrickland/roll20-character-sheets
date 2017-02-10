@@ -10,21 +10,24 @@ div.sheet-all {
     border: solid;
     border-color: white;
     border-width: 2;
-    width: 842px;
+    width: 840px;
+    margin: 1px;
 }
 .sheet-attrBox {
     border: solid;
     border-color: white;
     border-width: 2;
-    width: 430px;
+    width: 426px;
     padding: 2px 2px 2px 2px;
+    margin: 1px;
 }
-.sheet-charInfoBox {
+.sheet-specialFeaturesBox {
     border: solid;
     border-color: white;
     border-width: 2;
-    width: 402px;
+    width: 399px;
     padding: 2px 2px 2px 2px;
+    margin: 1px;
 }
 textarea, select, input {
     font-family: Arial Black;
@@ -37,7 +40,7 @@ textarea.sheet-textarea {
     resize: none;
     margin: 5px 0px 0px 0px;
 }
-select.sheet-select {
+select.sheet-classSelect, select.sheet-hitDieSelect {
     outline: 0;
     overflow: hidden;
     margin: 2px 0px 0px 0px;
@@ -47,6 +50,17 @@ select.sheet-select {
     border-radius: 5px;    
     height: 30px;
     width: 100px;
+}
+select.sheet-attackDamageSelect {
+    outline: 0;
+    overflow: hidden;
+    margin: 2px 0px 0px 0px;
+    padding: 2px 3px 5px 10px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 5px;    
+    height: 30px;
+    width: 120px;
 }
 input.sheet-text {
     height: 30px;
