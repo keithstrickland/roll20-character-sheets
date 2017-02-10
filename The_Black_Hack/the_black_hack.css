@@ -26,13 +26,15 @@ div.sheet-all {
     width: 402px;
     padding: 2px 2px 2px 2px;
 }
+textarea, select, input {
+    font-family: Arial Black;
+    font-size: 16px;
+    color: black;
+}
 textarea.sheet-textarea {
     height: 310px;
     width:  390px;
     resize: none;
-    font-family: Arial Black;
-    font-size: 16px;
-    color: black;
     margin: 5px 0px 0px 0px;
 }
 select.sheet-select {
@@ -45,9 +47,6 @@ select.sheet-select {
     border-radius: 5px;    
     height: 30px;
     width: 100px;
-    font-family: Arial Black;
-    font-size: 16px;
-    color: black;
 }
 input.sheet-text {
     height: 30px;
