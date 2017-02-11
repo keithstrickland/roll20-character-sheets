@@ -35,11 +35,19 @@
         </td>        
         <td class="tdattrlabel">ATTACK DAMAGE</td>
         <td>
-          <select class="sheet-attackDamageSelect" name="attr_ATTACK_DAMAGE">
-            <option value="1d4_1">1d4/1</option>
-            <option value="1d6_1d4">1d6/1d4</option>
-            <option value="1d8_1d4">1d8/1d4</option>
-            <option value="1d8_1d6">1d8/1d6</option>
+          <select class="sheet-attackDamageSelect" name="attr_ATTACK_DAMAGE_NORMAL">
+            <option value="1d4">1d4</option>
+            <option value="1d6">1d6</option>
+            <option value="1d8">1d8</option>
+            <option value="1d8">1d8</option>
+          </select>
+        </td>        
+        <td>
+          <select class="sheet-attackDamageSelect" name="attr_ATTACK_DAMAGE_UNARMED">
+            <option value="1">1</option>
+            <option value="1d4">1d4</option>
+            <option value="1d6">1d6</option>
+            <option value="1d8">1d8</option>
           </select>
         </td>        
       </tr>
@@ -63,21 +71,21 @@
                       type="roll"
                       name="attr_Strength-roll"
                       title="%{selected|Strength-roll}"
-                      value="&{template:default} {{name=Strength Check}} {{roll=[[1d20]]}} {{vs STR=@{STR}}} {{Roll type= Normal}}">
+                      value="&{template:default} {{name=Strength Check}} {{roll=[[1d20]]}} {{vs STR=@{STR}}} {{Roll type= Normal}} {{Normal Damage = [[@{ATTACK_DAMAGE_NORMAL}]]}} {{Unarmed Damage= [[@{ATTACK_DAMAGE_UNARMED}]]}}">
                 <img src="http://i.imgur.com/W1muO5V.png" width="40" height="40" alt="normal"/>
               </button>
               <button class="sheet-button"
                       type="roll"
                       name="attr_Strength-roll-adv"
                       title="%{selected|Strength-roll}"
-                      value="&{template:default} {{name=Strength Check}} {{roll=[[1d20]], [[1d20]]}} {{vs STR=@{STR}}} {{Roll type= Advantage}}">
+                      value="&{template:default} {{name=Strength Check}} {{roll=[[1d20]], [[1d20]]}} {{vs STR=@{STR}}} {{Roll type= Advantage}} {{Normal Damage = [[@{ATTACK_DAMAGE_NORMAL}]]}} {{Unarmed Damage= [[@{ATTACK_DAMAGE_UNARMED}]]}}">
                 <img src="http://i.imgur.com/cCgR356.png" width="40" height="40" alt="advantage"/>
               </button>
               <button class="sheet-button"
                       type="roll"
                       name="attr_Strength-roll-dis"
                       title="%{selected|Strength-roll}"
-                      value="&{template:default} {{name=Strength Check}} {{roll=[[1d20]], [[1d20]]}} {{vs STR=@{STR}}} {{Roll type= Disadvantage}}">
+                      value="&{template:default} {{name=Strength Check}} {{roll=[[1d20]], [[1d20]]}} {{vs STR=@{STR}}} {{Roll type= Disadvantage}} {{Normal Damage = [[@{ATTACK_DAMAGE_NORMAL}]]}} {{Unarmed Damage= [[@{ATTACK_DAMAGE_UNARMED}]]}}">
                 <img src="http://i.imgur.com/C6yg00m.png" width="40" height="40" alt="disadvantage"/>
               </button>
             </td>
@@ -90,21 +98,21 @@
                       type="roll"
                       name="attr_Dexterity-roll"
                       title="%{selected|Dexterity-roll}"
-                      value="&{template:default} {{name=Dexterity Check}} {{roll=[[1d20]]}} {{vs DEX=@{DEX}}} {{Roll type= Normal}}">
+                      value="&{template:default} {{name=Dexterity Check}} {{roll=[[1d20]]}} {{vs DEX=@{DEX}}} {{Roll type= Normal}} {{Normal Damage = [[@{ATTACK_DAMAGE_NORMAL}]]}} {{Unarmed Damage= [[@{ATTACK_DAMAGE_UNARMED}]]}}">
                 <img src="http://i.imgur.com/W1muO5V.png" width="40" height="40" alt="normal"/>
               </button>
               <button class="sheet-button"
                       type="roll"
                       name="attr_Dexterity-roll-adv"
                       title="%{selected|Dexterity-roll}"
-                      value="&{template:default} {{name=Dexterity Check}} {{roll=[[1d20]], [[1d20]]}} {{vs DEX=@{DEX}}} {{Roll type= Advantage}}">
+                      value="&{template:default} {{name=Dexterity Check}} {{roll=[[1d20]], [[1d20]]}} {{vs DEX=@{DEX}}} {{Roll type= Advantage}} {{Normal Damage = [[@{ATTACK_DAMAGE_NORMAL}]]}} {{Unarmed Damage= [[@{ATTACK_DAMAGE_UNARMED}]]}}">
                 <img src="http://i.imgur.com/cCgR356.png" width="40" height="40" alt="advantage"/>
               </button>
               <button class="sheet-button"
                       type="roll"
                       name="attr_Dexterity-roll-dis"
                       title="%{selected|Dexterity-roll}"
-                      value="&{template:default} {{name=Dexterity Check}} {{roll=[[1d20]], [[1d20]]}} {{vs DEX=@{DEX}}} {{Roll type= Disadvantage}}">
+                      value="&{template:default} {{name=Dexterity Check}} {{roll=[[1d20]], [[1d20]]}} {{vs DEX=@{DEX}}} {{Roll type= Disadvantage}} {{Normal Damage = [[@{ATTACK_DAMAGE_NORMAL}]]}} {{Unarmed Damage= [[@{ATTACK_DAMAGE_UNARMED}]]}}">
                 <img src="http://i.imgur.com/C6yg00m.png" width="40" height="40" alt="disadvantage"/>
               </button>
             </td>
