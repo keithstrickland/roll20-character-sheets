@@ -7,6 +7,11 @@ div.sheet-all {
     color: white;
     font-size: 20px;
 }
+.sheet-usagelabel {
+    font-family: Arial Black;
+    color: white;
+    font-size: 16px;
+}
 
 .sheet-summaryBox {
     border: solid;
@@ -56,6 +61,21 @@ select.sheet-attackDamageSelect {
     border-radius: 5px;    
     height: 30px;
     width: 120px;
+}
+.sheet-usageItemCheckbox {
+    height: 20px;
+    width: 20px;
+}
+select.sheet-usageDieSelect {
+    outline: 0;
+    overflow: hidden;
+    margin: 2px 0px 0px 0px;
+    padding: 2px 3px 5px 10px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 5px;    
+    height: 30px;
+    width: 70px;
 }
 input.sheet-text {
     height: 30px;
