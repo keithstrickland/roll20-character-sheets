@@ -244,21 +244,21 @@
             </td>
             <td><div class="usagelabel">Fresh Rations (d4)</div></td>
             <td>
-              <select class="sheet-usageDieSelect" name="attr_USAGEDIE">
-                <option value="d4">d4</option>
-                <option value="d6">d6</option>
-                <option value="d8">d8</option>
-                <option value="d10">d10</option>
-                <option value="d12">d12</option>
-                <option value="d20">d20</option>
+              <select class="sheet-usageDieSelect" name="attr_FRESHRATIONSUSAGEDIE" value="4">
+                <option value="4">d4</option>
+                <option value="6">d6</option>
+                <option value="8">d8</option>
+                <option value="10">d10</option>
+                <option value="12">d12</option>
+                <option value="20">d20</option>
               </select>
             </td>        
             <td>
               <button class="sheet-button"
                       type="roll"
                       name="attr_FreshRationsUsage-roll"
-                      title="%{selected|RationsUsage-roll}"
-                      value="&{template:general} {{name=@{character_name}}} {{subtag=Fresh Rations Usage Roll}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
+                      title="Fresh Rations Usage Roll"
+                      value="@{NAME} rolls a Fresh Rations Usage Roll (d@{FRESHRATIONSUSAGEDIE}) : [[{1d@{FRESHRATIONSUSAGEDIE}}]]">
               </button>
             </td>
           </tr>
@@ -268,45 +268,69 @@
             </td>
             <td><div class="usagelabel">Iron Rations (d8)</div></td>
             <td>
-              <select class="sheet-usageDieSelect" name="attr_USAGEDIE">
-                <option value="d4">d4</option>
-                <option value="d6">d6</option>
-                <option value="d8">d8</option>
-                <option value="d10">d10</option>
-                <option value="d12">d12</option>
-                <option value="d20">d20</option>
+              <select class="sheet-usageDieSelect" name="attr_IRONRATIONSUSAGEDIE" value="8">
+                <option value="4">d4</option>
+                <option value="6">d6</option>
+                <option value="8">d8</option>
+                <option value="10">d10</option>
+                <option value="12">d12</option>
+                <option value="20">d20</option>
               </select>
             </td>        
             <td>
               <button class="sheet-button"
                       type="roll"
                       name="attr_IronRationsUsage-roll"
-                      title="%{selected|IronRationsUsage-roll}"
-                      value="&{template:general} {{name=@{character_name}}} {{subtag=Iron Rations Usage Roll}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
+                      title="Iron Rations Usage Roll"
+                      value="@{NAME} rolls a Iron Rations Usage Roll (d@{IRONRATIONSUSAGEDIE}) : [[{1d@{IRONRATIONSUSAGEDIE}}]]">
               </button>
             </td>
           </tr>
           <tr>
             <td>
-              <center><input type=checkbox name="attr_TORCHES_EQUIPPED"/></center>
+              <center><input type=checkbox name="attr_WINESKIN_EQUIPPED"/></center>
             </td>
-            <td><div class="usagelabel">Torches (6) (d6)</div></td>
+            <td><div class="usagelabel">Wineskin (d6)</div></td>
             <td>
-              <select class="sheet-usageDieSelect" name="attr_USAGEDIE">
-                <option value="d4">d4</option>
-                <option value="d6">d6</option>
-                <option value="d8">d8</option>
-                <option value="d10">d10</option>
-                <option value="d12">d12</option>
-                <option value="d20">d20</option>
+              <select class="sheet-usageDieSelect" name="attr_WINESKINUSAGEDIE" value="6">
+                <option value="4">d4</option>
+                <option value="6">d6</option>
+                <option value="8">d8</option>
+                <option value="10">d10</option>
+                <option value="12">d12</option>
+                <option value="20">d20</option>
               </select>
             </td>        
             <td>
               <button class="sheet-button"
                       type="roll"
-                      name="attr_TorchesUsage-roll"
-                      title="%{selected|TorchesUsage-roll}"
-                      value="&{template:general} {{name=@{character_name}}} {{subtag=Torches Usage Roll}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
+                      name="attr_WineskinUsage-roll"
+                      title="Wineskin Usage Roll"
+                      value="@{NAME} rolls a Wineskin Usage Roll (d@{WINESKINUSAGEDIE}) : [[{1d@{WINESKINUSAGEDIE}}]]">
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <center><input type=checkbox name="attr_TORCH_EQUIPPED"/></center>
+            </td>
+            <td><div class="usagelabel">Torch (d6)</div></td>
+            <td>
+              <select class="sheet-usageDieSelect" name="attr_TORCHUSAGEDIE" value="6">
+                <option value="4">d4</option>
+                <option value="6">d6</option>
+                <option value="8">d8</option>
+                <option value="10">d10</option>
+                <option value="12">d12</option>
+                <option value="20">d20</option>
+              </select>
+            </td>        
+            <td>
+              <button class="sheet-button"
+                      type="roll"
+                      name="attr_TorchUsage-roll"
+                      title="Torch Usage Roll"
+                      value="@{NAME} rolls a Torch Usage Roll (d@{TORCHUSAGEDIE}) : [[{1d@{TORCHUSAGEDIE}}]]">
               </button>
             </td>
           </tr>
@@ -316,21 +340,21 @@
             </td>
             <td><div class="usagelabel">Quiver of Arrows (d10)</div></td>
             <td>
-              <select class="sheet-usageDieSelect" name="attr_USAGEDIE">
-                <option value="d4">d4</option>
-                <option value="d6">d6</option>
-                <option value="d8">d8</option>
-                <option value="d10">d10</option>
-                <option value="d12">d12</option>
-                <option value="d20">d20</option>
+              <select class="sheet-usageDieSelect" name="attr_ARROWSUSAGEDIE" value="10">
+                <option value="4">d4</option>
+                <option value="6">d6</option>
+                <option value="8">d8</option>
+                <option value="10">d10</option>
+                <option value="12">d12</option>
+                <option value="20">d20</option>
               </select>
             </td>        
             <td>
               <button class="sheet-button"
                       type="roll"
                       name="attr_ArrowsUsage-roll"
-                      title="%{selected|ArrowsUsage-roll}"
-                      value="&{template:general} {{name=@{character_name}}} {{subtag=Arrows Usage Roll}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
+                      title="Quiver of Arrows Usage Roll"
+                      value="@{NAME} rolls a Quiver of Arrows Usage Roll (d@{ARROWSUSAGEDIE}) : [[{1d@{ARROWSUSAGEDIE}}]]">
               </button>
             </td>
           </tr>
@@ -338,23 +362,23 @@
             <td>
               <center><input type=checkbox name="attr_BOLTS_EQUIPPED"/></center>
             </td>
-            <td><div class="usagelabel">Quiver of Bolts (d10)</div></td>
+            <td><div class="usagelabel">Case of Bolts (d10)</div></td>
             <td>
-              <select class="sheet-usageDieSelect" name="attr_USAGEDIE">
-                <option value="d4">d4</option>
-                <option value="d6">d6</option>
-                <option value="d8">d8</option>
-                <option value="d10">d10</option>
-                <option value="d12">d12</option>
-                <option value="d20">d20</option>
+              <select class="sheet-usageDieSelect" name="attr_BOLTSUSAGEDIE" value="10">
+                <option value="4">d4</option>
+                <option value="6">d6</option>
+                <option value="8">d8</option>
+                <option value="10">d10</option>
+                <option value="12">d12</option>
+                <option value="20">d20</option>
               </select>
             </td>        
             <td>
               <button class="sheet-button"
                       type="roll"
                       name="attr_BoltsUsage-roll"
-                      title="%{selected|BoltsUsage-roll}"
-                      value="&{template:general} {{name=@{character_name}}} {{subtag=Bolts Usage Roll}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
+                      title="Case of Bolts Usage Roll"
+                      value="@{NAME} rolls a Case of Bolts Usage Roll (d@{BOLTSUSAGEDIE}) : [[{1d@{BOLTSUSAGEDIE}}]]">
               </button>
             </td>
           </tr>
@@ -364,21 +388,21 @@
             </td>
             <td><div class="usagelabel">Common Herbs (d8)</div></td>
             <td>
-              <select class="sheet-usageDieSelect" name="attr_USAGEDIE">
-                <option value="d4">d4</option>
-                <option value="d6">d6</option>
-                <option value="d8">d8</option>
-                <option value="d10">d10</option>
-                <option value="d12">d12</option>
-                <option value="d20">d20</option>
+              <select class="sheet-usageDieSelect" name="attr_HERBSUSAGEDIE" value="8">
+                <option value="4">d4</option>
+                <option value="6">d6</option>
+                <option value="8">d8</option>
+                <option value="10">d10</option>
+                <option value="12">d12</option>
+                <option value="20">d20</option>
               </select>
             </td>        
             <td>
               <button class="sheet-button"
                       type="roll"
                       name="attr_HerbsUsage-roll"
-                      title="%{selected|HerbsUsage-roll}"
-                      value="&{template:general} {{name=@{character_name}}} {{subtag=Herbs Usage Roll}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
+                      title="Common Herbs Usage Roll"
+                      value="@{NAME} rolls a Common Herbs Usage Roll (d@{HERBSUSAGEDIE}) : [[{1d@{HERBSUSAGEDIE}}]]">
               </button>
             </td>
           </tr>
@@ -388,45 +412,45 @@
             </td>
             <td><div class="usagelabel">Flask of Oil (d6)</div></td>
             <td>
-              <select class="sheet-usageDieSelect" name="attr_USAGEDIE">
-                <option value="d4">d4</option>
-                <option value="d6">d6</option>
-                <option value="d8">d8</option>
-                <option value="d10">d10</option>
-                <option value="d12">d12</option>
-                <option value="d20">d20</option>
+              <select class="sheet-usageDieSelect" name="attr_FLASKOFOILUSAGEDIE" value="6">
+                <option value="4">d4</option>
+                <option value="6">d6</option>
+                <option value="8">d8</option>
+                <option value="10">d10</option>
+                <option value="12">d12</option>
+                <option value="20">d20</option>
               </select>
             </td>        
             <td>
               <button class="sheet-button"
                       type="roll"
-                      name="attr_FlaskOfOilUsage-roll"
-                      title="%{selected|FlaskOfOilUsage-roll}"
-                      value="&{template:general} {{name=@{character_name}}} {{subtag=Flask Of Oil Usage Roll}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
+                      name="attr_FlaskofOilUsage-roll"
+                      title="Flask of Oil Usage Roll"
+                      value="@{NAME} rolls a Flask of Oil Usage Roll (d@{FLASKOFOILUSAGEDIE}) : [[{1d@{FLASKOFOILUSAGEDIE}}]]">
               </button>
             </td>
           </tr>
           <tr>
             <td>
-              <center><input type=checkbox name="attr_RATIONS_EQUIPPED"/></center>
+              <center><input type=checkbox name="attr_HOLYWATER_EQUIPPED"/></center>
             </td>
             <td><div class="usagelabel">Holy Water (d4)</div></td>
             <td>
-              <select class="sheet-usageDieSelect" name="attr_USAGEDIE">
-                <option value="d4">d4</option>
-                <option value="d6">d6</option>
-                <option value="d8">d8</option>
-                <option value="d10">d10</option>
-                <option value="d12">d12</option>
-                <option value="d20">d20</option>
+              <select class="sheet-usageDieSelect" name="attr_HOLYWATERUSAGEDIE" value="4">
+                <option value="4">d4</option>
+                <option value="6">d6</option>
+                <option value="8">d8</option>
+                <option value="10">d10</option>
+                <option value="12">d12</option>
+                <option value="20">d20</option>
               </select>
             </td>        
             <td>
               <button class="sheet-button"
                       type="roll"
                       name="attr_HolyWaterUsage-roll"
-                      title="%{selected|HolyWaterUsage-roll}"
-                      value="&{template:general} {{name=@{character_name}}} {{subtag=Holy Water Usage Roll}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
+                      title="Holy Water Usage Roll"
+                      value="@{NAME} rolls a Holy Water Usage Roll (d@{HOLYWATERUSAGEDIE}) : [[{1d@{HOLYWATERUSAGEDIE}}]]">
               </button>
             </td>
           </tr>
