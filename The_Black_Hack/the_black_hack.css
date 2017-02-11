@@ -40,6 +40,13 @@ textarea.sheet-textarea {
     padding: 3px 0px 3px 2px;
     margin: 3px 0px 0px 0px;
 }
+textarea.sheet-gearTextArea {
+    height: 375px;
+    width:  100%;
+    resize: none;
+    padding: 3px 0px 3px 2px;
+    margin: 3px 0px 0px 0px;
+}
 select.sheet-classSelect, select.sheet-hitDieSelect {
     outline: 0;
     overflow: hidden;
@@ -84,4 +91,8 @@ input.sheet-text {
 input.sheet-short {
     height: 30px;
     width: 4em;
+}
+button.sheet-usageRollButton {
+    height: 35px;
+    width:  35px;
 }
