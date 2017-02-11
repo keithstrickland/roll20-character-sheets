@@ -18,7 +18,7 @@
           </select>
         </td>
         <td class="tdattrlabel">LEVEL</td>
-        <td><input type=number class="sheet-short" name="attr_LEVEL"/></td>
+        <td><input type=number class="sheet-short" name="attr_LEVEL" value="1"/></td>
       </tr>
       <tr>
         <td class="tdattrlabel">HIT POINTS</td>
@@ -56,164 +56,164 @@
           <tr>
             <td><div class="tdattrlabel" >STR</div></td>
             <td>
-              <input type=number size="2" class="sheet-short" name="attr_STR"/>
+              <input type=number size="2" class="sheet-short" name="attr_STR" value="10"/>
             </td>
             <td class="sheet-center">
               <button class="sheet-button"
                       type="roll"
-                      name="attr_StrengthSave-roll"
-                      title="%{selected|StrengthSave-roll}"
-                      value="&{template:general} {{name=@{character_name}}} {{subtag=Strength Save}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
+                      name="attr_Strength-roll"
+                      title="%{selected|Strength-roll}"
+                      value="&{template:default} {{name=Strength Check}} {{roll=[[1d20]]}} {{vs STR=@{STR}}} {{Roll type= Normal}}">
                 <img src="http://i.imgur.com/W1muO5V.png" width="40" height="40" alt="normal"/>
               </button>
               <button class="sheet-button"
                       type="roll"
-                      name="attr_StrengthSave-roll"
-                      title="%{selected|StrengthSave-roll}"
-                      value="&{template:general} {{name=@{character_name}}} {{subtag=Strength Save}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
-                <img src="http://i.imgur.com/C6yg00m.png" width="40" height="40" alt="advantage"/>
+                      name="attr_Strength-roll-adv"
+                      title="%{selected|Strength-roll}"
+                      value="&{template:default} {{name=Strength Check}} {{roll=[[1d20]], [[1d20]]}} {{vs STR=@{STR}}} {{Roll type= Advantage}}">
+                <img src="http://i.imgur.com/cCgR356.png" width="40" height="40" alt="advantage"/>
               </button>
               <button class="sheet-button"
                       type="roll"
-                      name="attr_StrengthSave-roll"
-                      title="%{selected|StrengthSave-roll}"
-                      value="&{template:general} {{name=@{character_name}}} {{subtag=Strength Save}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
-                <img src="http://i.imgur.com/cCgR356.png" width="40" height="40" alt="disadvantage"/>
+                      name="attr_Strength-roll-dis"
+                      title="%{selected|Strength-roll}"
+                      value="&{template:default} {{name=Strength Check}} {{roll=[[1d20]], [[1d20]]}} {{vs STR=@{STR}}} {{Roll type= Disadvantage}}">
+                <img src="http://i.imgur.com/C6yg00m.png" width="40" height="40" alt="disadvantage"/>
               </button>
             </td>
           </tr>
           <tr>
             <td class="tdattrlabel">DEX</td>
-            <td><input type=number class="sheet-short" name="attr_DEX"/></td>
+            <td><input type=number class="sheet-short" name="attr_DEX" value="10"/></td>
             <td class="sheet-center">
               <button class="sheet-button"
                       type="roll"
-                      name="attr_StrengthSave-roll"
-                      title="%{selected|StrengthSave-roll}"
-                      value="&{template:general} {{name=@{character_name}}} {{subtag=Strength Save}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
+                      name="attr_Dexterity-roll"
+                      title="%{selected|Dexterity-roll}"
+                      value="&{template:default} {{name=Dexterity Check}} {{roll=[[1d20]]}} {{vs DEX=@{DEX}}} {{Roll type= Normal}}">
                 <img src="http://i.imgur.com/W1muO5V.png" width="40" height="40" alt="normal"/>
               </button>
               <button class="sheet-button"
                       type="roll"
-                      name="attr_StrengthSave-roll"
-                      title="%{selected|StrengthSave-roll}"
-                      value="&{template:general} {{name=@{character_name}}} {{subtag=Strength Save}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
-                <img src="http://i.imgur.com/C6yg00m.png" width="40" height="40" alt="advantage"/>
+                      name="attr_Dexterity-roll-adv"
+                      title="%{selected|Dexterity-roll}"
+                      value="&{template:default} {{name=Dexterity Check}} {{roll=[[1d20]], [[1d20]]}} {{vs DEX=@{DEX}}} {{Roll type= Advantage}}">
+                <img src="http://i.imgur.com/cCgR356.png" width="40" height="40" alt="advantage"/>
               </button>
               <button class="sheet-button"
                       type="roll"
-                      name="attr_StrengthSave-roll"
-                      title="%{selected|StrengthSave-roll}"
-                      value="&{template:general} {{name=@{character_name}}} {{subtag=Strength Save}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
-                <img src="http://i.imgur.com/cCgR356.png" width="40" height="40" alt="disadvantage"/>
+                      name="attr_Dexterity-roll-dis"
+                      title="%{selected|Dexterity-roll}"
+                      value="&{template:default} {{name=Dexterity Check}} {{roll=[[1d20]], [[1d20]]}} {{vs DEX=@{DEX}}} {{Roll type= Disadvantage}}">
+                <img src="http://i.imgur.com/C6yg00m.png" width="40" height="40" alt="disadvantage"/>
               </button>
             </td>
           </tr>
           <tr>
             <td class="tdattrlabel">CON</td>
-            <td><input type=number class="sheet-short" name="attr_CON"/></td>
+            <td><input type=number class="sheet-short" name="attr_CON" value="10"/></td>
             <td class="sheet-center">
               <button class="sheet-button"
                       type="roll"
-                      name="attr_StrengthSave-roll"
-                      title="%{selected|StrengthSave-roll}"
-                      value="&{template:general} {{name=@{character_name}}} {{subtag=Strength Save}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
+                      name="attr_Constitution-roll"
+                      title="%{selected|Constitution-roll}"
+                      value="&{template:default} {{name=Constitution Check}} {{roll=[[1d20]]}} {{vs CON=@{CON}}} {{Roll type= Normal}}">
                 <img src="http://i.imgur.com/W1muO5V.png" width="40" height="40" alt="normal"/>
               </button>
               <button class="sheet-button"
                       type="roll"
-                      name="attr_StrengthSave-roll"
-                      title="%{selected|StrengthSave-roll}"
-                      value="&{template:general} {{name=@{character_name}}} {{subtag=Strength Save}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
-                <img src="http://i.imgur.com/C6yg00m.png" width="40" height="40" alt="advantage"/>
+                      name="attr_Constitution-roll-adv"
+                      title="%{selected|Constitution-roll}"
+                      value="&{template:default} {{name=Constitution Check}} {{roll=[[1d20]], [[1d20]]}} {{vs CON=@{CON}}} {{Roll type= Advantage}}">
+                <img src="http://i.imgur.com/cCgR356.png" width="40" height="40" alt="advantage"/>
               </button>
               <button class="sheet-button"
                       type="roll"
-                      name="attr_StrengthSave-roll"
-                      title="%{selected|StrengthSave-roll}"
-                      value="&{template:general} {{name=@{character_name}}} {{subtag=Strength Save}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
-                <img src="http://i.imgur.com/cCgR356.png" width="40" height="40" alt="disadvantage"/>
+                      name="attr_Constitution-roll-dis"
+                      title="%{selected|Constitution-roll}"
+                      value="&{template:default} {{name=Constitution Check}} {{roll=[[1d20]], [[1d20]]}} {{vs CON=@{CON}}} {{Roll type= Disadvantage}}">
+                <img src="http://i.imgur.com/C6yg00m.png" width="40" height="40" alt="disadvantage"/>
               </button>
             </td>
           </tr>
           <tr>
             <td class="tdattrlabel">WIS</td>
-            <td><input type=number class="sheet-short" name="attr_WIS"/></td>
+            <td><input type=number class="sheet-short" name="attr_WIS" value="10"/></td>
             <td class="sheet-center">
               <button class="sheet-button"
                       type="roll"
-                      name="attr_StrengthSave-roll"
-                      title="%{selected|StrengthSave-roll}"
-                      value="&{template:general} {{name=@{character_name}}} {{subtag=Strength Save}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
+                      name="attr_Wisdom-roll"
+                      title="%{selected|Wisdom-roll}"
+                      value="&{template:default} {{name=Wisdom Check}} {{roll=[[1d20]]}} {{vs WIS=@{WIS}}} {{Roll type= Normal}}">
                 <img src="http://i.imgur.com/W1muO5V.png" width="40" height="40" alt="normal"/>
               </button>
               <button class="sheet-button"
                       type="roll"
-                      name="attr_StrengthSave-roll"
-                      title="%{selected|StrengthSave-roll}"
-                      value="&{template:general} {{name=@{character_name}}} {{subtag=Strength Save}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
-                <img src="http://i.imgur.com/C6yg00m.png" width="40" height="40" alt="advantage"/>
+                      name="attr_Wisdom-roll-adv"
+                      title="%{selected|Wisdom-roll}"
+                      value="&{template:default} {{name=Wisdom Check}} {{roll=[[1d20]], [[1d20]]}} {{vs WIS=@{WIS}}} {{Roll type= Advantage}}">
+                <img src="http://i.imgur.com/cCgR356.png" width="40" height="40" alt="advantage"/>
               </button>
               <button class="sheet-button"
                       type="roll"
-                      name="attr_StrengthSave-roll"
-                      title="%{selected|StrengthSave-roll}"
-                      value="&{template:general} {{name=@{character_name}}} {{subtag=Strength Save}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
-                <img src="http://i.imgur.com/cCgR356.png" width="40" height="40" alt="disadvantage"/>
+                      name="attr_Wisdom-roll-dis"
+                      title="%{selected|Wisdom-roll}"
+                      value="&{template:default} {{name=Wisdom Check}} {{roll=[[1d20]], [[1d20]]}} {{vs WIS=@{WIS}}} {{Roll type= Disadvantage}}">
+                <img src="http://i.imgur.com/C6yg00m.png" width="40" height="40" alt="disadvantage"/>
               </button>
             </td>
           </tr>
           <tr>
             <td class="tdattrlabel">INT</td>
-            <td><input type=number class="sheet-short" name="attr_INT"/></td>
+            <td><input type=number class="sheet-short" name="attr_INT" value="10"/></td>
             <td class="sheet-center">
               <button class="sheet-button"
                       type="roll"
-                      name="attr_StrengthSave-roll"
-                      title="%{selected|StrengthSave-roll}"
-                      value="&{template:general} {{name=@{character_name}}} {{subtag=Strength Save}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
+                      name="attr_Intelligence-roll"
+                      title="%{selected|Intelligence-roll}"
+                      value="&{template:default} {{name=Intelligence Check}} {{roll=[[1d20]]}} {{vs INT=@{INT}}} {{Roll type= Normal}}">
                 <img src="http://i.imgur.com/W1muO5V.png" width="40" height="40" alt="normal"/>
               </button>
               <button class="sheet-button"
                       type="roll"
-                      name="attr_StrengthSave-roll"
-                      title="%{selected|StrengthSave-roll}"
-                      value="&{template:general} {{name=@{character_name}}} {{subtag=Strength Save}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
-                <img src="http://i.imgur.com/C6yg00m.png" width="40" height="40" alt="advantage"/>
+                      name="attr_Intelligence-roll-adv"
+                      title="%{selected|Intelligence-roll}"
+                      value="&{template:default} {{name=Intelligence Check}} {{roll=[[1d20]], [[1d20]]}} {{vs INT=@{INT}}} {{Roll type= Advantage}}">
+                <img src="http://i.imgur.com/cCgR356.png" width="40" height="40" alt="advantage"/>
               </button>
               <button class="sheet-button"
                       type="roll"
-                      name="attr_StrengthSave-roll"
-                      title="%{selected|StrengthSave-roll}"
-                      value="&{template:general} {{name=@{character_name}}} {{subtag=Strength Save}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
-                <img src="http://i.imgur.com/cCgR356.png" width="40" height="40" alt="disadvantage"/>
+                      name="attr_Intelligence-roll-dis"
+                      title="%{selected|Intelligence-roll}"
+                      value="&{template:default} {{name=Intelligence Check}} {{roll=[[1d20]], [[1d20]]}} {{vs INT=@{INT}}} {{Roll type= Disadvantage}}">
+                <img src="http://i.imgur.com/C6yg00m.png" width="40" height="40" alt="disadvantage"/>
               </button>
             </td>
           </tr>
           <tr>
             <td class="tdattrlabel">CHA</td>
-            <td><input type=number class="sheet-short" name="attr_CHA"/></td>
+            <td><input type=number class="sheet-short" name="attr_CHA" value="10"/></td>
             <td class="sheet-center">
               <button class="sheet-button"
                       type="roll"
-                      name="attr_StrengthSave-roll"
-                      title="%{selected|StrengthSave-roll}"
-                      value="&{template:general} {{name=@{character_name}}} {{subtag=Strength Save}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
+                      name="attr_Charisma-roll"
+                      title="%{selected|Charisma-roll}"
+                      value="&{template:default} {{name=Charisma Check}} {{roll=[[1d20]]}} {{vs CHA=@{CHA}}} {{Roll type= Normal}}">
                 <img src="http://i.imgur.com/W1muO5V.png" width="40" height="40" alt="normal"/>
               </button>
               <button class="sheet-button"
                       type="roll"
-                      name="attr_StrengthSave-roll"
-                      title="%{selected|StrengthSave-roll}"
-                      value="&{template:general} {{name=@{character_name}}} {{subtag=Strength Save}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
-                <img src="http://i.imgur.com/C6yg00m.png" width="40" height="40" alt="advantage"/>
+                      name="attr_Charisma-roll-adv"
+                      title="%{selected|Charisma-roll}"
+                      value="&{template:default} {{name=Charisma Check}} {{roll=[[1d20]], [[1d20]]}} {{vs CHA=@{CHA}}} {{Roll type= Advantage}}">
+                <img src="http://i.imgur.com/cCgR356.png" width="40" height="40" alt="advantage"/>
               </button>
               <button class="sheet-button"
                       type="roll"
-                      name="attr_StrengthSave-roll"
-                      title="%{selected|StrengthSave-roll}"
-                      value="&{template:general} {{name=@{character_name}}} {{subtag=Strength Save}} {{1d20 Roll=[[1d20<@{StrengthSave}cf>@{StrengthSave}]] }}">
-                <img src="http://i.imgur.com/cCgR356.png" width="40" height="40" alt="disadvantage"/>
+                      name="attr_Charisma-roll-dis"
+                      title="%{selected|Charisma-roll}"
+                      value="&{template:default} {{name=Charisma Check}} {{roll=[[1d20]], [[1d20]]}} {{vs CHA=@{CHA}}} {{Roll type= Disadvantage}}">
+                <img src="http://i.imgur.com/C6yg00m.png" width="40" height="40" alt="disadvantage"/>
               </button>
             </td>
           </tr>
