@@ -22,7 +22,7 @@
       </tr>
       <tr>
         <td class="tdattrlabel">HIT POINTS</td>
-        <td><input type=number class="sheet-short" name="attr_HP"/></td>
+        <td><input type="text" class="sheet-text" name="attr_HP"/></td>
         <td class="tdattrlabel">HIT DIE</td>
         <td>
           <select class="sheet-hitDieSelect" name="attr_HD">
@@ -69,21 +69,21 @@
               <button class="sheet-button"
                       type="roll"
                       name="attr_Strength-roll"
-                      title="%{selected|Strength-roll}"
+                      title="STR Normal"
                       value="&{template:default} {{name=Strength Check}} {{roll=[[1d20]]}} {{vs STR=@{STR}}} {{Roll type= Normal}} {{Normal Damage = [[@{ATTACK_DAMAGE_NORMAL}]]}} {{Unarmed Damage= [[@{ATTACK_DAMAGE_UNARMED}]]}}">
                 <img src="http://i.imgur.com/W1muO5V.png" width="40" height="40" alt="normal"/>
               </button>
               <button class="sheet-button"
                       type="roll"
                       name="attr_Strength-roll-adv"
-                      title="%{selected|Strength-roll}"
+                      title="STR with Advantage"
                       value="&{template:default} {{name=Strength Check}} {{roll=[[1d20]], [[1d20]]}} {{vs STR=@{STR}}} {{Roll type= Advantage}} {{Normal Damage = [[@{ATTACK_DAMAGE_NORMAL}]]}} {{Unarmed Damage= [[@{ATTACK_DAMAGE_UNARMED}]]}}">
                 <img src="http://i.imgur.com/cCgR356.png" width="40" height="40" alt="advantage"/>
               </button>
               <button class="sheet-button"
                       type="roll"
                       name="attr_Strength-roll-dis"
-                      title="%{selected|Strength-roll}"
+                      title="STR with Disadvantage"
                       value="&{template:default} {{name=Strength Check}} {{roll=[[1d20]], [[1d20]]}} {{vs STR=@{STR}}} {{Roll type= Disadvantage}} {{Normal Damage = [[@{ATTACK_DAMAGE_NORMAL}]]}} {{Unarmed Damage= [[@{ATTACK_DAMAGE_UNARMED}]]}}">
                 <img src="http://i.imgur.com/C6yg00m.png" width="40" height="40" alt="disadvantage"/>
               </button>
@@ -96,21 +96,21 @@
               <button class="sheet-button"
                       type="roll"
                       name="attr_Dexterity-roll"
-                      title="%{selected|Dexterity-roll}"
+                      title="DEX Normal"
                       value="&{template:default} {{name=Dexterity Check}} {{roll=[[1d20]]}} {{vs DEX=@{DEX}}} {{Roll type= Normal}} {{Normal Damage = [[@{ATTACK_DAMAGE_NORMAL}]]}} {{Unarmed Damage= [[@{ATTACK_DAMAGE_UNARMED}]]}}">
                 <img src="http://i.imgur.com/W1muO5V.png" width="40" height="40" alt="normal"/>
               </button>
               <button class="sheet-button"
                       type="roll"
                       name="attr_Dexterity-roll-adv"
-                      title="%{selected|Dexterity-roll}"
+                      title="DEX with Advantage"
                       value="&{template:default} {{name=Dexterity Check}} {{roll=[[1d20]], [[1d20]]}} {{vs DEX=@{DEX}}} {{Roll type= Advantage}} {{Normal Damage = [[@{ATTACK_DAMAGE_NORMAL}]]}} {{Unarmed Damage= [[@{ATTACK_DAMAGE_UNARMED}]]}}">
                 <img src="http://i.imgur.com/cCgR356.png" width="40" height="40" alt="advantage"/>
               </button>
               <button class="sheet-button"
                       type="roll"
                       name="attr_Dexterity-roll-dis"
-                      title="%{selected|Dexterity-roll}"
+                      title="DEX with Disadvantage"
                       value="&{template:default} {{name=Dexterity Check}} {{roll=[[1d20]], [[1d20]]}} {{vs DEX=@{DEX}}} {{Roll type= Disadvantage}} {{Normal Damage = [[@{ATTACK_DAMAGE_NORMAL}]]}} {{Unarmed Damage= [[@{ATTACK_DAMAGE_UNARMED}]]}}">
                 <img src="http://i.imgur.com/C6yg00m.png" width="40" height="40" alt="disadvantage"/>
               </button>
@@ -123,21 +123,21 @@
               <button class="sheet-button"
                       type="roll"
                       name="attr_Constitution-roll"
-                      title="%{selected|Constitution-roll}"
+                      title="CON Normal"
                       value="&{template:default} {{name=Constitution Check}} {{roll=[[1d20]]}} {{vs CON=@{CON}}} {{Roll type= Normal}}">
                 <img src="http://i.imgur.com/W1muO5V.png" width="40" height="40" alt="normal"/>
               </button>
               <button class="sheet-button"
                       type="roll"
                       name="attr_Constitution-roll-adv"
-                      title="%{selected|Constitution-roll}"
+                      title="CON with Advantage"
                       value="&{template:default} {{name=Constitution Check}} {{roll=[[1d20]], [[1d20]]}} {{vs CON=@{CON}}} {{Roll type= Advantage}}">
                 <img src="http://i.imgur.com/cCgR356.png" width="40" height="40" alt="advantage"/>
               </button>
               <button class="sheet-button"
                       type="roll"
                       name="attr_Constitution-roll-dis"
-                      title="%{selected|Constitution-roll}"
+                      title="CON with Disadvantage"
                       value="&{template:default} {{name=Constitution Check}} {{roll=[[1d20]], [[1d20]]}} {{vs CON=@{CON}}} {{Roll type= Disadvantage}}">
                 <img src="http://i.imgur.com/C6yg00m.png" width="40" height="40" alt="disadvantage"/>
               </button>
@@ -150,21 +150,21 @@
               <button class="sheet-button"
                       type="roll"
                       name="attr_Wisdom-roll"
-                      title="%{selected|Wisdom-roll}"
+                      title="WIS Normal"
                       value="&{template:default} {{name=Wisdom Check}} {{roll=[[1d20]]}} {{vs WIS=@{WIS}}} {{Roll type= Normal}}">
                 <img src="http://i.imgur.com/W1muO5V.png" width="40" height="40" alt="normal"/>
               </button>
               <button class="sheet-button"
                       type="roll"
                       name="attr_Wisdom-roll-adv"
-                      title="%{selected|Wisdom-roll}"
+                      title="WIS with Advantage"
                       value="&{template:default} {{name=Wisdom Check}} {{roll=[[1d20]], [[1d20]]}} {{vs WIS=@{WIS}}} {{Roll type= Advantage}}">
                 <img src="http://i.imgur.com/cCgR356.png" width="40" height="40" alt="advantage"/>
               </button>
               <button class="sheet-button"
                       type="roll"
                       name="attr_Wisdom-roll-dis"
-                      title="%{selected|Wisdom-roll}"
+                      title="WIS with Disadvantage"
                       value="&{template:default} {{name=Wisdom Check}} {{roll=[[1d20]], [[1d20]]}} {{vs WIS=@{WIS}}} {{Roll type= Disadvantage}}">
                 <img src="http://i.imgur.com/C6yg00m.png" width="40" height="40" alt="disadvantage"/>
               </button>
@@ -177,21 +177,21 @@
               <button class="sheet-button"
                       type="roll"
                       name="attr_Intelligence-roll"
-                      title="%{selected|Intelligence-roll}"
+                      title="INT Normal"
                       value="&{template:default} {{name=Intelligence Check}} {{roll=[[1d20]]}} {{vs INT=@{INT}}} {{Roll type= Normal}}">
                 <img src="http://i.imgur.com/W1muO5V.png" width="40" height="40" alt="normal"/>
               </button>
               <button class="sheet-button"
                       type="roll"
                       name="attr_Intelligence-roll-adv"
-                      title="%{selected|Intelligence-roll}"
+                      title="INT with Advantage"
                       value="&{template:default} {{name=Intelligence Check}} {{roll=[[1d20]], [[1d20]]}} {{vs INT=@{INT}}} {{Roll type= Advantage}}">
                 <img src="http://i.imgur.com/cCgR356.png" width="40" height="40" alt="advantage"/>
               </button>
               <button class="sheet-button"
                       type="roll"
                       name="attr_Intelligence-roll-dis"
-                      title="%{selected|Intelligence-roll}"
+                      title="INT with Disadvantage"
                       value="&{template:default} {{name=Intelligence Check}} {{roll=[[1d20]], [[1d20]]}} {{vs INT=@{INT}}} {{Roll type= Disadvantage}}">
                 <img src="http://i.imgur.com/C6yg00m.png" width="40" height="40" alt="disadvantage"/>
               </button>
@@ -204,21 +204,21 @@
               <button class="sheet-button"
                       type="roll"
                       name="attr_Charisma-roll"
-                      title="%{selected|Charisma-roll}"
+                      title="CHA Normal"
                       value="&{template:default} {{name=Charisma Check}} {{roll=[[1d20]]}} {{vs CHA=@{CHA}}} {{Roll type= Normal}}">
                 <img src="http://i.imgur.com/W1muO5V.png" width="40" height="40" alt="normal"/>
               </button>
               <button class="sheet-button"
                       type="roll"
                       name="attr_Charisma-roll-adv"
-                      title="%{selected|Charisma-roll}"
+                      title="CHA with Advantage"
                       value="&{template:default} {{name=Charisma Check}} {{roll=[[1d20]], [[1d20]]}} {{vs CHA=@{CHA}}} {{Roll type= Advantage}}">
                 <img src="http://i.imgur.com/cCgR356.png" width="40" height="40" alt="advantage"/>
               </button>
               <button class="sheet-button"
                       type="roll"
                       name="attr_Charisma-roll-dis"
-                      title="%{selected|Charisma-roll}"
+                      title="CHA with Disadvantage"
                       value="&{template:default} {{name=Charisma Check}} {{roll=[[1d20]], [[1d20]]}} {{vs CHA=@{CHA}}} {{Roll type= Disadvantage}}">
                 <img src="http://i.imgur.com/C6yg00m.png" width="40" height="40" alt="disadvantage"/>
               </button>
