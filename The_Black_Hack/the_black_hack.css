@@ -13,6 +13,12 @@ div.sheet-all {
     font-size: 16px;
 }
 
+.sheet-checkboxLabel {
+    font-family: Arial Black;
+    color: white;
+    font-size: 12px;
+}
+
 .sheet-summaryBox {
     border: solid;
     border-color: white;
@@ -34,7 +40,7 @@ textarea, select, input {
     color: black;
 }
 textarea.sheet-textarea {
-    height: 305px;
+    height: 276px;
     width:  100%;
     resize: none;
     padding: 3px 0px 3px 2px;
@@ -92,6 +98,12 @@ input.sheet-short {
     height: 30px;
     width: 4em;
 }
+
+.sheet-button-img {
+    height: 35px;
+    width:  35px;
+}
+
 button.sheet-usageRollButton {
     height: 35px;
     width:  35px;
