@@ -7,6 +7,11 @@ div.sheet-all {
     color: white;
     font-size: 20px;
 }
+
+.sheet-col {
+  margin-right: 0px;
+}
+
 .sheet-usagelabel {
     font-family: Arial Black;
     color: white;
@@ -26,6 +31,7 @@ div.sheet-all {
     margin: 0px 6px 1px 1px;
     padding: 5px;
 }
+
 .sheet-box {
     border: solid;
     border-color: white;
@@ -39,6 +45,7 @@ textarea, select, input {
     font-size: 16px;
     color: black;
 }
+
 textarea.sheet-textarea {
     height: 276px;
     width:  100%;
@@ -46,13 +53,15 @@ textarea.sheet-textarea {
     padding: 3px 0px 3px 2px;
     margin: 3px 0px 0px 0px;
 }
+
 textarea.sheet-gearTextArea {
-    height: 375px;
+    height: 374px;
     width:  100%;
     resize: none;
     padding: 3px 0px 3px 2px;
     margin: 3px 0px 0px 0px;
 }
+
 select.sheet-classSelect, select.sheet-hitDieSelect {
     outline: 0;
     overflow: hidden;
@@ -64,6 +73,7 @@ select.sheet-classSelect, select.sheet-hitDieSelect {
     height: 30px;
     width: 100px;
 }
+
 select.sheet-attackDamageSelect {
     outline: 0;
     overflow: hidden;
@@ -75,10 +85,12 @@ select.sheet-attackDamageSelect {
     height: 30px;
     width: 70px;
 }
+
 .sheet-usageItemCheckbox {
     height: 20px;
     width: 20px;
 }
+
 select.sheet-usageDieSelect {
     outline: 0;
     overflow: hidden;
@@ -90,10 +102,12 @@ select.sheet-usageDieSelect {
     height: 30px;
     width: 70px;
 }
+
 input.sheet-text {
     height: 30px;
     width: 250px;
 }
+
 input.sheet-short {
     height: 30px;
     width: 4em;

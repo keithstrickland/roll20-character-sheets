@@ -72,23 +72,27 @@
                       type="roll"
                       name="attr_Strength-roll"
                       title="STR Normal"
-                      value="&{template:default} {{name=Strength Check}} {{roll=[[1d20]]}} {{vs STR=@{STR}}} {{Roll type= Normal}} {{Normal Damage = [[@{ATTACK_DAMAGE_NORMAL}]]}} {{Unarmed Damage= [[@{ATTACK_DAMAGE_UNARMED}]]}}">
+                      value="&{template:blackhacksave} {{rollname=STR Save}} {{normalsave=1}} {{saveroll=[[1d20]]}} {{abilityname=STR}} {{abilityvalue=@{STR}}} @{StrDamageFlag} {{damage=[[@{ATTACK_DAMAGE_NORMAL}]] | [[@{ATTACK_DAMAGE_UNARMED}]]}} @{StrSaDamageFlag} {{sadamage=[[@{ATTACK_DAMAGE_NORMAL}+@{ATTACK_DAMAGE_NORMAL}+@{LEVEL}]] | [[@{ATTACK_DAMAGE_UNARMED}+@{ATTACK_DAMAGE_UNARMED}+@{LEVEL}]]}}">
                 <img class="sheet-button-img" src="http://i.imgur.com/W1muO5V.png" alt="normal"/>
               </button>
               <button class="sheet-button"
                       type="roll"
                       name="attr_Strength-roll-adv"
                       title="STR with Advantage"
-                      value="&{template:default} {{name=Strength Check}} {{roll=[[1d20]], [[1d20]]}} {{vs STR=@{STR}}} {{Roll type= Advantage}} {{Normal Damage = [[@{ATTACK_DAMAGE_NORMAL}]]}} {{Unarmed Damage= [[@{ATTACK_DAMAGE_UNARMED}]]}}">
+                      value="&{template:blackhacksave} {{rollname=STR Save with Advantage}} {{advantagesave=1}} {{saveroll=[[1d20]]}} {{saveadvantage=[[1d20]]}} {{abilityname=STR}} {{abilityvalue=@{STR}}} @{StrDamageFlag} {{damage=[[@{ATTACK_DAMAGE_NORMAL}]] | [[@{ATTACK_DAMAGE_UNARMED}]]}} @{StrSaDamageFlag} {{sadamage=[[@{ATTACK_DAMAGE_NORMAL}+@{ATTACK_DAMAGE_NORMAL}+@{LEVEL}]] | [[@{ATTACK_DAMAGE_UNARMED}+@{ATTACK_DAMAGE_UNARMED}+@{LEVEL}]]}}">
                 <img class="sheet-button-img" src="http://i.imgur.com/cCgR356.png" alt="advantage"/>
               </button>
               <button class="sheet-button"
                       type="roll"
                       name="attr_Strength-roll-dis"
                       title="STR with Disadvantage"
-                      value="&{template:default} {{name=Strength Check}} {{roll=[[1d20]], [[1d20]]}} {{vs STR=@{STR}}} {{Roll type= Disadvantage}} {{Normal Damage = [[@{ATTACK_DAMAGE_NORMAL}]]}} {{Unarmed Damage= [[@{ATTACK_DAMAGE_UNARMED}]]}}">
+                      value="&{template:blackhacksave} {{rollname=STR Save with Disadvantage}} {{disadvantagesave=1}} {{saveroll=[[1d20]]}} {{savedisadvantage=[[1d20]]}} {{abilityname=STR}} {{abilityvalue=@{STR}}} @{StrDamageFlag} {{damage=[[@{ATTACK_DAMAGE_NORMAL}]] | [[@{ATTACK_DAMAGE_UNARMED}]]}} @{StrSaDamageFlag} {{sadamage=[[@{ATTACK_DAMAGE_NORMAL}+@{ATTACK_DAMAGE_NORMAL}+@{LEVEL}]] | [[@{ATTACK_DAMAGE_UNARMED}+@{ATTACK_DAMAGE_UNARMED}+@{LEVEL}]]}}">
                 <img class="sheet-button-img" src="http://i.imgur.com/C6yg00m.png" alt="disadvantage"/>
               </button>
+              <span>
+                <input name="attr_StrDamageFlag" type="checkbox" value="{{damageflag=1}}" checked="true" />
+                <input name="attr_StrSaDamageFlag" type="checkbox" value="{{sadamageflag=1}}" checked="true" />
+              </span>
             </td>
           </tr>
           <tr>
@@ -99,23 +103,27 @@
                       type="roll"
                       name="attr_Dexterity-roll"
                       title="DEX Normal"
-                      value="&{template:default} {{name=Dexterity Check}} {{roll=[[1d20]]}} {{vs DEX=@{DEX}}} {{Roll type= Normal}} {{Normal Damage = [[@{ATTACK_DAMAGE_NORMAL}]]}} {{Unarmed Damage= [[@{ATTACK_DAMAGE_UNARMED}]]}}">
+                      value="&{template:blackhacksave} {{rollname=DEX Save}} {{normalsave=1}} {{saveroll=[[1d20]]}} {{abilityname=DEX}} {{abilityvalue=@{DEX}}} @{DexDamageFlag} {{damage=[[@{ATTACK_DAMAGE_NORMAL}]] | [[@{ATTACK_DAMAGE_UNARMED}]]}} @{DexSaDamageFlag} {{sadamage=[[@{ATTACK_DAMAGE_NORMAL}+@{ATTACK_DAMAGE_NORMAL}+@{LEVEL}]] | [[@{ATTACK_DAMAGE_UNARMED}+@{ATTACK_DAMAGE_UNARMED}+@{LEVEL}]]}}">
                 <img class="sheet-button-img" src="http://i.imgur.com/W1muO5V.png" alt="normal"/>
               </button>
               <button class="sheet-button"
                       type="roll"
                       name="attr_Dexterity-roll-adv"
                       title="DEX with Advantage"
-                      value="&{template:default} {{name=Dexterity Check}} {{roll=[[1d20]], [[1d20]]}} {{vs DEX=@{DEX}}} {{Roll type= Advantage}} {{Normal Damage = [[@{ATTACK_DAMAGE_NORMAL}]]}} {{Unarmed Damage= [[@{ATTACK_DAMAGE_UNARMED}]]}}">
+                      value="&{template:blackhacksave} {{rollname=DEX Save with Advantage}} {{advantagesave=1}} {{saveroll=[[1d20]]}} {{saveadvantage=[[1d20]]}} {{abilityname=DEX}} {{abilityvalue=@{DEX}}} @{DexDamageFlag} {{damage=[[@{ATTACK_DAMAGE_NORMAL}]] | [[@{ATTACK_DAMAGE_UNARMED}]]}} @{DexSaDamageFlag} {{sadamage=[[@{ATTACK_DAMAGE_NORMAL}+@{ATTACK_DAMAGE_NORMAL}+@{LEVEL}]] | [[@{ATTACK_DAMAGE_UNARMED}+@{ATTACK_DAMAGE_UNARMED}+@{LEVEL}]]}}">
                 <img class="sheet-button-img" src="http://i.imgur.com/cCgR356.png" alt="advantage"/>
               </button>
               <button class="sheet-button"
                       type="roll"
                       name="attr_Dexterity-roll-dis"
                       title="DEX with Disadvantage"
-                      value="&{template:default} {{name=Dexterity Check}} {{roll=[[1d20]], [[1d20]]}} {{vs DEX=@{DEX}}} {{Roll type= Disadvantage}} {{Normal Damage = [[@{ATTACK_DAMAGE_NORMAL}]]}} {{Unarmed Damage= [[@{ATTACK_DAMAGE_UNARMED}]]}}">
+                      value="&{template:blackhacksave} {{rollname=DEX Save with Disadvantage}} {{disadvantagesave=1}} {{saveroll=[[1d20]]}} {{savedisadvantage=[[1d20]]}} {{abilityname=DEX}} {{abilityvalue=@{DEX}}} @{DexDamageFlag} {{damage=[[@{ATTACK_DAMAGE_NORMAL}]] | [[@{ATTACK_DAMAGE_UNARMED}]]}} @{DexSaDamageFlag} {{sadamage=[[@{ATTACK_DAMAGE_NORMAL}+@{ATTACK_DAMAGE_NORMAL}+@{LEVEL}]] | [[@{ATTACK_DAMAGE_UNARMED}+@{ATTACK_DAMAGE_UNARMED}+@{LEVEL}]]}}">
                 <img class="sheet-button-img" src="http://i.imgur.com/C6yg00m.png" alt="disadvantage"/>
               </button>
+              <span>
+                <input name="attr_DexDamageFlag" type="checkbox" value="{{damageflag=1}}" checked="false" />
+                <input name="attr_DexSaDamageFlag" type="checkbox" value="{{sadamageflag=1}}" checked="false" />
+              </span>
             </td>
           </tr>
           <tr>
@@ -126,21 +134,21 @@
                       type="roll"
                       name="attr_Constitution-roll"
                       title="CON Normal"
-                      value="&{template:default} {{name=Constitution Check}} {{roll=[[1d20]]}} {{vs CON=@{CON}}} {{Roll type= Normal}}">
+                      value="&{template:blackhacksave} {{rollname=CON Save}} {{normalsave=1}} {{saveroll=[[1d20]]}} {{abilityname=CON}} {{abilityvalue=@{CON}}}">
                 <img class="sheet-button-img" src="http://i.imgur.com/W1muO5V.png" alt="normal"/>
               </button>
               <button class="sheet-button"
                       type="roll"
                       name="attr_Constitution-roll-adv"
                       title="CON with Advantage"
-                      value="&{template:default} {{name=Constitution Check}} {{roll=[[1d20]], [[1d20]]}} {{vs CON=@{CON}}} {{Roll type= Advantage}}">
+                      value="&{template:blackhacksave} {{rollname=CON Save with Advantage}} {{advantagesave=1}} {{saveroll=[[1d20]]}} {{saveadvantage=[[1d20]]}} {{abilityname=CON}} {{abilityvalue=@{CON}}}">
                 <img class="sheet-button-img" src="http://i.imgur.com/cCgR356.png" alt="advantage"/>
               </button>
               <button class="sheet-button"
                       type="roll"
                       name="attr_Constitution-roll-dis"
                       title="CON with Disadvantage"
-                      value="&{template:default} {{name=Constitution Check}} {{roll=[[1d20]], [[1d20]]}} {{vs CON=@{CON}}} {{Roll type= Disadvantage}}">
+                      value="&{template:blackhacksave} {{rollname=CON Save with Disadvantage}} {{disadvantagesave=1}} {{saveroll=[[1d20]]}} {{savedisadvantage=[[1d20]]}} {{abilityname=CON}} {{abilityvalue=@{CON}}}">
                 <img class="sheet-button-img" src="http://i.imgur.com/C6yg00m.png" alt="disadvantage"/>
               </button>
             </td>
@@ -153,21 +161,21 @@
                       type="roll"
                       name="attr_Wisdom-roll"
                       title="WIS Normal"
-                      value="&{template:default} {{name=Wisdom Check}} {{roll=[[1d20]]}} {{vs WIS=@{WIS}}} {{Roll type= Normal}}">
+                      value="&{template:blackhacksave} {{rollname=WIS Save}} {{normalsave=1}} {{saveroll=[[1d20]]}} {{abilityname=WIS}} {{abilityvalue=@{WIS}}}">
                 <img class="sheet-button-img" src="http://i.imgur.com/W1muO5V.png" alt="normal"/>
               </button>
               <button class="sheet-button"
                       type="roll"
                       name="attr_Wisdom-roll-adv"
                       title="WIS with Advantage"
-                      value="&{template:default} {{name=Wisdom Check}} {{roll=[[1d20]], [[1d20]]}} {{vs WIS=@{WIS}}} {{Roll type= Advantage}}">
+                      value="&{template:blackhacksave} {{rollname=WIS Save with Advantage}} {{advantagesave=1}} {{saveroll=[[1d20]]}} {{saveadvantage=[[1d20]]}} {{abilityname=WIS}} {{abilityvalue=@{WIS}}}">
                 <img class="sheet-button-img" src="http://i.imgur.com/cCgR356.png" alt="advantage"/>
               </button>
               <button class="sheet-button"
                       type="roll"
                       name="attr_Wisdom-roll-dis"
                       title="WIS with Disadvantage"
-                      value="&{template:default} {{name=Wisdom Check}} {{roll=[[1d20]], [[1d20]]}} {{vs WIS=@{WIS}}} {{Roll type= Disadvantage}}">
+                      value="&{template:blackhacksave} {{rollname=WIS Save with Disadvantage}} {{disadvantagesave=1}} {{saveroll=[[1d20]]}} {{savedisadvantage=[[1d20]]}} {{abilityname=WIS}} {{abilityvalue=@{WIS}}}">
                 <img class="sheet-button-img" src="http://i.imgur.com/C6yg00m.png" alt="disadvantage"/>
               </button>
             </td>
@@ -180,21 +188,21 @@
                       type="roll"
                       name="attr_Intelligence-roll"
                       title="INT Normal"
-                      value="&{template:default} {{name=Intelligence Check}} {{roll=[[1d20]]}} {{vs INT=@{INT}}} {{Roll type= Normal}}">
+                      value="&{template:blackhacksave} {{rollname=INT Save}} {{normalsave=1}} {{saveroll=[[1d20]]}} {{abilityname=INT}} {{abilityvalue=@{INT}}}">
                 <img class="sheet-button-img" src="http://i.imgur.com/W1muO5V.png"  alt="normal"/>
               </button>
               <button class="sheet-button"
                       type="roll"
                       name="attr_Intelligence-roll-adv"
                       title="INT with Advantage"
-                      value="&{template:default} {{name=Intelligence Check}} {{roll=[[1d20]], [[1d20]]}} {{vs INT=@{INT}}} {{Roll type= Advantage}}">
+                      value="&{template:blackhacksave} {{rollname=INT Save with Advantage}} {{advantagesave=1}} {{saveroll=[[1d20]]}} {{saveadvantage=[[1d20]]}} {{abilityname=INT}} {{abilityvalue=@{INT}}}">
                 <img class="sheet-button-img" src="http://i.imgur.com/cCgR356.png" alt="advantage"/>
               </button>
               <button class="sheet-button"
                       type="roll"
                       name="attr_Intelligence-roll-dis"
                       title="INT with Disadvantage"
-                      value="&{template:default} {{name=Intelligence Check}} {{roll=[[1d20]], [[1d20]]}} {{vs INT=@{INT}}} {{Roll type= Disadvantage}}">
+                      value="&{template:blackhacksave} {{rollname=INT Save with Disadvantage}} {{disadvantagesave=1}} {{saveroll=[[1d20]]}} {{savedisadvantage=[[1d20]]}} {{abilityname=INT}} {{abilityvalue=@{INT}}}">
                 <img class="sheet-button-img" src="http://i.imgur.com/C6yg00m.png" alt="disadvantage"/>
               </button>
             </td>
@@ -207,21 +215,21 @@
                       type="roll"
                       name="attr_Charisma-roll"
                       title="CHA Normal"
-                      value="&{template:default} {{name=Charisma Check}} {{roll=[[1d20]]}} {{vs CHA=@{CHA}}} {{Roll type= Normal}}">
+                      value="&{template:blackhacksave} {{rollname=CHA Save}} {{normalsave=1}} {{saveroll=[[1d20]]}} {{abilityname=CHA}} {{abilityvalue=@{CHA}}}">
                 <img class="sheet-button-img" src="http://i.imgur.com/W1muO5V.png" alt="normal"/>
               </button>
               <button class="sheet-button"
                       type="roll"
                       name="attr_Charisma-roll-adv"
                       title="CHA with Advantage"
-                      value="&{template:default} {{name=Charisma Check}} {{roll=[[1d20]], [[1d20]]}} {{vs CHA=@{CHA}}} {{Roll type= Advantage}}">
+                      value="&{template:blackhacksave} {{rollname=CHA Save with Advantage}} {{advantagesave=1}} {{saveroll=[[1d20]]}} {{saveadvantage=[[1d20]]}} {{abilityname=CHA}} {{abilityvalue=@{CHA}}}">
                 <img class="sheet-button-img" src="http://i.imgur.com/cCgR356.png" alt="advantage"/>
               </button>
               <button class="sheet-button"
                       type="roll"
                       name="attr_Charisma-roll-dis"
                       title="CHA with Disadvantage"
-                      value="&{template:default} {{name=Charisma Check}} {{roll=[[1d20]], [[1d20]]}} {{vs CHA=@{CHA}}} {{Roll type= Disadvantage}}">
+                      value="&{template:blackhacksave} {{rollname=CHA Save with Disadvantage}} {{disadvantagesave=1}} {{saveroll=[[1d20]]}} {{savedisadvantage=[[1d20]]}} {{abilityname=CHA}} {{abilityvalue=@{CHA}}}">
                 <img class="sheet-button-img" src="http://i.imgur.com/C6yg00m.png" alt="disadvantage"/>
               </button>
             </td>
@@ -474,3 +482,26 @@
     </div>
   </div>
 </div>
+
+<rolltemplate class="sheet-rolltemplate-blackhacksave">
+    <table>
+	    {{#normalsave}}
+		<tr><td><span class="tcat">Save: </span>{{saveroll}} vs {{abilityname}} ({{abilityvalue}})</td></tr>
+		<tr><td><span class="tcat">Type: </span>Normal</td></tr>
+        {{/normalsave}}
+        {{#advantagesave}}
+		<tr><td><span class="tcat">Save: </span>{{saveroll}} | {{saveadvantage}} vs {{abilityname}} ({{abilityvalue}})</td></tr>
+		<tr><td><span class="tcat">Type: </span>Advantage</td></tr>
+        {{/advantagesave}}
+        {{#disadvantagesave}}
+		<tr><td><span class="tcat">Save: </span>{{saveroll}} | {{savedisadvantage}} vs {{abilityname}} ({{abilityvalue}})</td></tr>
+		<tr><td><span class="tcat">Type: </span>Disadvantage</td></tr>
+        {{/disadvantagesave}}
+		{{#damageflag}}
+		<tr><td><span class="tcat">Damage: </span>{{damage}}</td></tr>
+		{{/damageflag}}
+		{{#sadamageflag}}
+		<tr><td><span class="tcat">Sneak Attack Damage: </span>{{sadamage}}</td></tr>
+		{{/sadamageflag}}
+    </table>
+</rolltemplate>
