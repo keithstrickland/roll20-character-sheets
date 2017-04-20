@@ -1,30 +1,36 @@
-div.sheet-all {
+div.sheet-all
+ {
     background-color: black;
 }
 
-.sheet-tdattrlabel {
+.sheet-tdattrlabel
+ {
     font-family: Arial Black;
     color: white;
     font-size: 20px;
 }
 
-.sheet-col {
+.sheet-col
+ {
   margin-right: 0px;
 }
 
-.sheet-usagelabel {
+.sheet-usagelabel
+ {
     font-family: Arial Black;
     color: white;
     font-size: 16px;
 }
 
-.sheet-checkboxLabel {
+.sheet-checkboxLabel
+ {
     font-family: Arial Black;
     color: white;
     font-size: 12px;
 }
 
-.sheet-summaryBox {
+.sheet-summaryBox
+ {
     border: solid;
     border-color: white;
     border-width: 2;
@@ -32,7 +38,8 @@ div.sheet-all {
     padding: 5px;
 }
 
-.sheet-box {
+.sheet-box
+ {
     border: solid;
     border-color: white;
     border-width: 2;
@@ -40,13 +47,15 @@ div.sheet-all {
     padding: 5px;
 }
 
-textarea, select, input {
+textarea, select, input
+ {
     font-family: Arial Black;
     font-size: 16px;
     color: black;
 }
 
-textarea.sheet-textarea {
+textarea.sheet-textarea
+ {
     height: 276px;
     width:  100%;
     resize: none;
@@ -54,7 +63,8 @@ textarea.sheet-textarea {
     margin: 3px 0px 0px 0px;
 }
 
-textarea.sheet-gearTextArea {
+textarea.sheet-gearTextArea
+ {
     height: 374px;
     width:  100%;
     resize: none;
@@ -62,7 +72,8 @@ textarea.sheet-gearTextArea {
     margin: 3px 0px 0px 0px;
 }
 
-select.sheet-classSelect, select.sheet-hitDieSelect {
+select.sheet-classSelect, select.sheet-hitDieSelect
+ {
     outline: 0;
     overflow: hidden;
     margin: 2px 0px 0px 0px;
@@ -74,7 +85,8 @@ select.sheet-classSelect, select.sheet-hitDieSelect {
     width: 100px;
 }
 
-select.sheet-attackDamageSelect {
+select.sheet-attackDamageSelect
+ {
     outline: 0;
     overflow: hidden;
     margin: 2px 0px 0px 0px;
@@ -86,12 +98,14 @@ select.sheet-attackDamageSelect {
     width: 70px;
 }
 
-.sheet-usageItemCheckbox {
+.sheet-usageItemCheckbox
+ {
     height: 20px;
     width: 20px;
 }
 
-select.sheet-usageDieSelect {
+select.sheet-usageDieSelect
+ {
     outline: 0;
     overflow: hidden;
     margin: 2px 0px 0px 0px;
@@ -103,22 +117,91 @@ select.sheet-usageDieSelect {
     width: 70px;
 }
 
-input.sheet-text {
+input.sheet-text
+ {
     height: 30px;
     width: 250px;
 }
 
-input.sheet-short {
+input.sheet-short
+ {
     height: 30px;
     width: 4em;
 }
 
-.sheet-button-img {
+.sheet-button-img
+ {
+    height: 32px;
+    width:  32px;
+}
+
+button.sheet-usageRollButton 
+{
     height: 35px;
     width:  35px;
 }
 
-button.sheet-usageRollButton {
-    height: 35px;
-    width:  35px;
+.sheet-rolltemplate-blackhacktest table,
+.sheet-rolltemplate-blackhackusage table
+{
+    width:            224px;
+    padding:          2px;
+	border:           1px solid;
+    background-color: black;
+    color:            white;
+    font-family:      Arial;
+	font-size:        1.0em;
+}
+
+.sheet-rolltemplate-blackhacktest th,
+.sheet-rolltemplate-blackhackusage th
+ {
+    background-color: black;
+    padding-left:     5px;
+	line-height:      1.6em;
+	font-size:        1.2em;
+    text-align:       left;
+    font-variant:     small-caps;
+}
+ 
+.sheet-rolltemplate-blackhacktest .sheet-arrow-right,
+.sheet-rolltemplate-blackhackusage .sheet-arrow-right
+ {
+    border-top:    3px solid transparent;
+    border-bottom: 3px solid transparent;
+	border-left:   215px solid white;
+}
+
+.sheet-rolltemplate-blackhacktest .sheet-smallarrow-right
+ {
+    border-top:    1px solid transparent;
+    border-bottom: 1px solid transparent;
+	border-left:   215px solid white;
+}
+
+.sheet-rolltemplate-blackhacktest .sheet-tcat,
+.sheet-rolltemplate-blackhackusage .sheet-tcat
+ {
+    font-style:  italic;
+    font-weight: bold;
+}
+ 
+.sheet-rolltemplate-blackhacktest td,
+.sheet-rolltemplate-blackhackusage td
+ {
+    padding-left:   5px;
+    padding-bottom: 5px;
+}
+ 
+.sheet-rolltemplate-blackhacktest .inlinerollresult,
+.sheet-rolltemplate-blackhacktest .inlinerollresult.fullcrit,
+.sheet-rolltemplate-blackhacktest .inlinerollresult.fullfail,
+.sheet-rolltemplate-blackhacktest .inlinerollresult.importantroll,
+.sheet-rolltemplate-blackhackusage .inlinerollresult,
+.sheet-rolltemplate-blackhackusage .inlinerollresult.fullcrit,
+.sheet-rolltemplate-blackhackusage .inlinerollresult.fullfail,
+.sheet-rolltemplate-blackhackusage .inlinerollresult.importantroll
+ {
+    background-color: black;
+    border:           1px solid white;
 }
