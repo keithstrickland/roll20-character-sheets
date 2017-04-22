@@ -1,149 +1,174 @@
-div.sheet-all
- {
+div.sheet-all {
     background-color: black;
 }
 
-.sheet-tdattrlabel
- {
+table {
+    width: 100%;
+}
+
+textarea, select, input {
     font-family: Arial Black;
-    color: white;
+    font-size:   16px;
+    color:       black;
+}
+
+textarea {
+    width:              100%;
+    resize:             none;
+    box-sizing:         border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;    
+    margin:             2px 2px 2px 2px;
+}
+
+select {
+    outline:               0;
+    overflow:              hidden;
+    margin:                2px 0px 0px 0px;
+    padding:               2px 3px 5px 10px;
+    -moz-border-radius:    4px;
+    -webkit-border-radius: 4px;
+    border-radius:         5px;    
+    height:                30px;
+}
+
+input {
+    height: 30px;
+}
+
+.sheet-tdSummaryLabel,
+.sheet-tdAttrLabel,
+.sheet-thUsageLabel,
+.sheet-plusMinusToRollHeader,
+.sheet-attributesHeader,
+.sheet-extraDamage {
+    font-family:  Arial Black;
+    color:        white;
+    font-variant: small-caps;
+}
+
+.sheet-boxHeader,
+.sheet-tdUsageLabel
+{
+    font-family:  Arial Black;
+    color:        white;
+}
+
+.sheet-boxHeader,
+.sheet-tdSummaryLabel {
     font-size: 20px;
 }
 
-.sheet-col
- {
-  margin-right: 0px;
+.sheet-tdAttrLabel,
+.sheet-thUsageLabel {
+    font-size: 18px;
 }
 
-.sheet-usagelabel
- {
-    font-family: Arial Black;
-    color: white;
+.sheet-tdUsageLabel,
+{
     font-size: 16px;
 }
 
-.sheet-checkboxLabel
- {
-    font-family: Arial Black;
-    color: white;
-    font-size: 12px;
+.sheet-plusMinusToRollHeader,
+.sheet-attributesHeader,
+.sheet-extraDamage {
+
 }
 
-.sheet-summaryBox
- {
-    border: solid;
+.sheet-summaryBox {
+    border:       solid;
     border-color: white;
     border-width: 2;
-    margin: 0px 6px 1px 1px;
-    padding: 5px;
+    margin:       2px 2px 0px 2px;
+    padding:      5px;
 }
 
-.sheet-box
- {
-    border: solid;
-    border-color: white;
-    border-width: 2;
-    margin: 0px 0px 1px 1px;
-    padding: 5px;
-}
-
-textarea, select, input
- {
-    font-family: Arial Black;
-    font-size: 16px;
-    color: black;
-}
-
-textarea.sheet-textarea
- {
-    height: 276px;
-    width:  100%;
-    resize: none;
-    padding: 3px 0px 3px 2px;
-    margin: 3px 0px 0px 0px;
-}
-
-textarea.sheet-gearTextArea
- {
-    height: 374px;
-    width:  100%;
-    resize: none;
-    padding: 3px 0px 3px 2px;
-    margin: 3px 0px 0px 0px;
-}
-
-select.sheet-classSelect, select.sheet-hitDieSelect
- {
-    outline: 0;
-    overflow: hidden;
-    margin: 2px 0px 0px 0px;
-    padding: 2px 3px 5px 10px;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    border-radius: 5px;    
-    height: 30px;
+.sheet-classSelect,
+.sheet-hitDieSelect {
     width: 100px;
 }
 
-select.sheet-attackDamageSelect
- {
-    outline: 0;
-    overflow: hidden;
-    margin: 2px 0px 0px 0px;
-    padding: 2px 3px 5px 10px;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    border-radius: 5px;    
-    height: 30px;
+.sheet-attackDamageSelect {
     width: 70px;
 }
 
-.sheet-usageItemCheckbox
- {
-    height: 20px;
-    width: 20px;
+.sheet-text {
+    width:  250px;
 }
 
-select.sheet-usageDieSelect
- {
-    outline: 0;
-    overflow: hidden;
-    margin: 2px 0px 0px 0px;
-    padding: 2px 3px 5px 10px;
-    -moz-border-radius: 4px;
+.sheet-attributeInput {
+    width: 2em;
+}
+
+.sheet-modifierInput,
+.sheet-plusToDamageInput {
+    width: 1em;
+}
+
+.sheet-quadcell {
+    margin:          0px 2px 0px 0px;
+    border-collapse: separate;
+    border-spacing:  2px;
+}
+
+.sheet-attributesBox,
+.sheet-specialFeaturesBox,
+.sheet-usageItemsBox,
+.sheet-gearBox {
+    border:       solid;
+    border-color: white;
+    border-width: 2;
+    padding:      5px;
+}
+
+.sheet-specialFeaturesBox,
+.sheet-gearBox {
+    width: 350px;
+}
+
+.sheet-notesBox {
+    border:       solid;
+    border-color: white;
+    border-width: 2;
+    margin:       0px 2px 2px 2px;
+    padding:      5px;
+}
+
+.sheet-specialFeaturesTextArea {
+    height: 235px;
+}
+
+.sheet-gearTextArea {
+    height: 590px;
+}
+
+.sheet-notesTextArea {
+    height: 250px;
+}
+
+.sheet-buttonImg {
+    height: 24px;
+}
+
+select.sheet-usageDieSelect {
+    outline:               0;
+    overflow:              hidden;
+    margin:                2px 0px 0px 0px;
+    padding:               2px 3px 5px 10px;
+    -moz-border-radius:    4px;
     -webkit-border-radius: 4px;
-    border-radius: 5px;    
-    height: 30px;
-    width: 70px;
+    border-radius:         5px;    
+    height:                30px;
+    width:                 70px;
 }
 
-input.sheet-text
- {
-    height: 30px;
-    width: 250px;
-}
-
-input.sheet-short
- {
-    height: 30px;
-    width: 4em;
-}
-
-.sheet-button-img
- {
-    height: 32px;
-    width:  32px;
-}
-
-button.sheet-usageRollButton 
-{
+button.sheet-usageRollButton {
     height: 35px;
     width:  35px;
 }
 
 .sheet-rolltemplate-blackhacktest table,
-.sheet-rolltemplate-blackhackusage table
-{
+.sheet-rolltemplate-blackhackusage table {
     width:            224px;
     padding:          2px;
 	border:           1px solid;
@@ -154,8 +179,7 @@ button.sheet-usageRollButton
 }
 
 .sheet-rolltemplate-blackhacktest th,
-.sheet-rolltemplate-blackhackusage th
- {
+.sheet-rolltemplate-blackhackusage th {
     background-color: black;
     padding-left:     5px;
 	line-height:      1.6em;
@@ -165,30 +189,26 @@ button.sheet-usageRollButton
 }
  
 .sheet-rolltemplate-blackhacktest .sheet-arrow-right,
-.sheet-rolltemplate-blackhackusage .sheet-arrow-right
- {
+.sheet-rolltemplate-blackhackusage .sheet-arrow-right {
     border-top:    3px solid transparent;
     border-bottom: 3px solid transparent;
 	border-left:   215px solid white;
 }
 
-.sheet-rolltemplate-blackhacktest .sheet-smallarrow-right
- {
+.sheet-rolltemplate-blackhacktest .sheet-smallarrow-right {
     border-top:    1px solid transparent;
     border-bottom: 1px solid transparent;
 	border-left:   215px solid white;
 }
 
 .sheet-rolltemplate-blackhacktest .sheet-tcat,
-.sheet-rolltemplate-blackhackusage .sheet-tcat
- {
+.sheet-rolltemplate-blackhackusage .sheet-tcat {
     font-style:  italic;
     font-weight: bold;
 }
  
 .sheet-rolltemplate-blackhacktest td,
-.sheet-rolltemplate-blackhackusage td
- {
+.sheet-rolltemplate-blackhackusage td {
     padding-left:   5px;
     padding-bottom: 5px;
 }
@@ -200,8 +220,7 @@ button.sheet-usageRollButton
 .sheet-rolltemplate-blackhackusage .inlinerollresult,
 .sheet-rolltemplate-blackhackusage .inlinerollresult.fullcrit,
 .sheet-rolltemplate-blackhackusage .inlinerollresult.fullfail,
-.sheet-rolltemplate-blackhackusage .inlinerollresult.importantroll
- {
+.sheet-rolltemplate-blackhackusage .inlinerollresult.importantroll {
     background-color: black;
     border:           1px solid white;
 }

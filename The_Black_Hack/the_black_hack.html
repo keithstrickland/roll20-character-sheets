@@ -1,486 +1,616 @@
-<div class="sheet-all">
-  <img src="http://i.imgur.com/R9Ye3vQ.png"/>
-  <div class="summaryBox">
-    <table cellpadding=3>
-      <tr>
-        <td class="tdattrlabel">NAME</td>
-        <td colspan="3"><input type="text" class="sheet-text" name="attr_NAME"/></td>
-        <td class="tdattrlabel">CLASS</td>
-        <td>
-          <select class="sheet-classSelect" name="attr_CLASS">
-            <option value="warrior">Warrior</option>
-            <option value="thief">Thief</option>
-            <option value="cleric">Cleric</option>
-            <option value="conjurer">Conjurer</option>
-            <option value="dwarf">Dwarf</option>
-            <option value="elf">Elf</option>
-            <option value="halfling">Halfling</option>
-          </select>
-        </td>
-        <td class="tdattrlabel">LEVEL</td>
-        <td colspan="2"><input type=number class="sheet-short" name="attr_LEVEL" value="1"/></td>
-      </tr>
-      <tr>
-        <td class="tdattrlabel">HIT POINTS</td>
-        <td><input type=number class="sheet-short" name="attr_HP"/></td>
-        <td class="tdattrlabel">DAMAGE</td>
-        <td><input type=number class="sheet-short" name="attr_DAMAGE"/></td>
-        <td class="tdattrlabel">HIT DIE</td>
-        <td>
-          <select class="sheet-hitDieSelect" name="attr_HD">
-            <option value="d4">d4</option>
-            <option value="d6">d6</option>
-            <option value="d8">d8</option>
-            <option value="d10">d10</option>
-            <option value="d12">d12</option>
-          </select>
-        </td>        
-        <td class="tdattrlabel">ATTACK DAMAGE</td>
-        <td>
-          <select class="sheet-attackDamageSelect" name="attr_ATTACK_DAMAGE_NORMAL">
-            <option value="1d4">1d4</option>
-            <option value="1d6">1d6</option>
-            <option value="1d8">1d8</option>
-          </select>
-        </td>        
-        <td>
-          <select class="sheet-attackDamageSelect" name="attr_ATTACK_DAMAGE_UNARMED">
-            <option value="1">1</option>
-            <option value="1d4">1d4</option>
-            <option value="1d6">1d6</option>
-            <option value="1d8">1d8</option>
-          </select>
-        </td>        
-      </tr>
-    </tabLe>
-  </div>
-  <div class="sheet-2colrow">
-    <div class='sheet-col'>
-      <div class="box">
-        <table cellpadding=2>
-          <tr>
-            <th class="tdattrlabel" colspan="2">ATTRIBUTES</th>
-            <th class="tdattrlabel">ROLL</th>
-          </tr>
-          <tr>
-            <td><div class="tdattrlabel">STR</div></td>
-            <td>
-              <input type=number size="2" class="sheet-short" name="attr_STR" value="10"/>
-            </td>
-            <td class="sheet-center">
-              <button class="sheet-button"
-                      type="roll"
-                      name="attr_Strength-roll"
-                      title="STR Normal"
-                      value="&{template:blackhacktest} {{playername=@{NAME}}} {{normaltest=1}} {{testroll=[[1d20]]}} {{abilityname=STR}} {{abilityvalue=@{STR}}} @{StrDamageFlag} {{damage=[[@{ATTACK_DAMAGE_NORMAL}]] | [[@{ATTACK_DAMAGE_UNARMED}]]}} @{StrSaDamageFlag} {{sadamage=[[@{ATTACK_DAMAGE_NORMAL}+@{ATTACK_DAMAGE_NORMAL}+@{LEVEL}]] | [[@{ATTACK_DAMAGE_UNARMED}+@{ATTACK_DAMAGE_UNARMED}+@{LEVEL}]]}}">
-                <img class="sheet-button-img" src="http://i.imgur.com/W1muO5V.png" alt="normal"/>
-              </button>
-              <button class="sheet-button"
-                      type="roll"
-                      name="attr_Strength-roll-adv"
-                      title="STR with Advantage"
-                      value="&{template:blackhacktest} {{playername=@{NAME}}} {{advantagetest=1}} {{testroll=[[1d20]]}} {{testadvantage=[[1d20]]}} {{abilityname=STR}} {{abilityvalue=@{STR}}} @{StrDamageFlag} {{damage=[[@{ATTACK_DAMAGE_NORMAL}]] | [[@{ATTACK_DAMAGE_UNARMED}]]}} @{StrSaDamageFlag} {{sadamage=[[@{ATTACK_DAMAGE_NORMAL}+@{ATTACK_DAMAGE_NORMAL}+@{LEVEL}]] | [[@{ATTACK_DAMAGE_UNARMED}+@{ATTACK_DAMAGE_UNARMED}+@{LEVEL}]]}}">
-                <img class="sheet-button-img" src="http://i.imgur.com/cCgR356.png" alt="advantage"/>
-              </button>
-              <button class="sheet-button"
-                      type="roll"
-                      name="attr_Strength-roll-dis"
-                      title="STR with Disadvantage"
-                      value="&{template:blackhacktest} {{playername=@{NAME}}} {{disadvantagetest=1}} {{testroll=[[1d20]]}} {{testdisadvantage=[[1d20]]}} {{abilityname=STR}} {{abilityvalue=@{STR}}} @{StrDamageFlag} {{damage=[[@{ATTACK_DAMAGE_NORMAL}]] | [[@{ATTACK_DAMAGE_UNARMED}]]}} @{StrSaDamageFlag} {{sadamage=[[@{ATTACK_DAMAGE_NORMAL}+@{ATTACK_DAMAGE_NORMAL}+@{LEVEL}]] | [[@{ATTACK_DAMAGE_UNARMED}+@{ATTACK_DAMAGE_UNARMED}+@{LEVEL}]]}}">
-                <img class="sheet-button-img" src="http://i.imgur.com/C6yg00m.png" alt="disadvantage"/>
-              </button>
-              <span>
-                <input name="attr_StrDamageFlag" type="checkbox" value="{{damageflag=1}}" checked="true" />
-                <input name="attr_StrSaDamageFlag" type="checkbox" value="{{sadamageflag=1}}" checked="true" />
-              </span>
-            </td>
-          </tr>
-          <tr>
-            <td class="tdattrlabel">DEX</td>
-            <td><input type=number class="sheet-short" name="attr_DEX" value="10"/></td>
-            <td class="sheet-center">
-              <button class="sheet-button"
-                      type="roll"
-                      name="attr_Dexterity-roll"
-                      title="DEX Normal"
-                      value="&{template:blackhacktest} {{playername=@{NAME}}} {{normaltest=1}} {{testroll=[[1d20]]}} {{abilityname=DEX}} {{abilityvalue=@{DEX}}} @{DexDamageFlag} {{damage=[[@{ATTACK_DAMAGE_NORMAL}]] | [[@{ATTACK_DAMAGE_UNARMED}]]}} @{DexSaDamageFlag} {{sadamage=[[@{ATTACK_DAMAGE_NORMAL}+@{ATTACK_DAMAGE_NORMAL}+@{LEVEL}]] | [[@{ATTACK_DAMAGE_UNARMED}+@{ATTACK_DAMAGE_UNARMED}+@{LEVEL}]]}}">
-                <img class="sheet-button-img" src="http://i.imgur.com/W1muO5V.png" alt="normal"/>
-              </button>
-              <button class="sheet-button"
-                      type="roll"
-                      name="attr_Dexterity-roll-adv"
-                      title="DEX with Advantage"
-                      value="&{template:blackhacktest} {{playername=@{NAME}}} {{advantagetest=1}} {{testroll=[[1d20]]}} {{testadvantage=[[1d20]]}} {{abilityname=DEX}} {{abilityvalue=@{DEX}}} @{DexDamageFlag} {{damage=[[@{ATTACK_DAMAGE_NORMAL}]] | [[@{ATTACK_DAMAGE_UNARMED}]]}} @{DexSaDamageFlag} {{sadamage=[[@{ATTACK_DAMAGE_NORMAL}+@{ATTACK_DAMAGE_NORMAL}+@{LEVEL}]] | [[@{ATTACK_DAMAGE_UNARMED}+@{ATTACK_DAMAGE_UNARMED}+@{LEVEL}]]}}">
-                <img class="sheet-button-img" src="http://i.imgur.com/cCgR356.png" alt="advantage"/>
-              </button>
-              <button class="sheet-button"
-                      type="roll"
-                      name="attr_Dexterity-roll-dis"
-                      title="DEX with Disadvantage"
-                      value="&{template:blackhacktest} {{playername=@{NAME}}} {{disadvantagetest=1}} {{testroll=[[1d20]]}} {{testdisadvantage=[[1d20]]}} {{abilityname=DEX}} {{abilityvalue=@{DEX}}} @{DexDamageFlag} {{damage=[[@{ATTACK_DAMAGE_NORMAL}]] | [[@{ATTACK_DAMAGE_UNARMED}]]}} @{DexSaDamageFlag} {{sadamage=[[@{ATTACK_DAMAGE_NORMAL}+@{ATTACK_DAMAGE_NORMAL}+@{LEVEL}]] | [[@{ATTACK_DAMAGE_UNARMED}+@{ATTACK_DAMAGE_UNARMED}+@{LEVEL}]]}}">
-                <img class="sheet-button-img" src="http://i.imgur.com/C6yg00m.png" alt="disadvantage"/>
-              </button>
-              <span>
-                <input name="attr_DexDamageFlag" type="checkbox" value="{{damageflag=1}}" checked="false" />
-                <input name="attr_DexSaDamageFlag" type="checkbox" value="{{sadamageflag=1}}" checked="false" />
-              </span>
-            </td>
-          </tr>
-          <tr>
-            <td class="tdattrlabel">CON</td>
-            <td><input type=number class="sheet-short" name="attr_CON" value="10"/></td>
-            <td class="sheet-center">
-              <button class="sheet-button"
-                      type="roll"
-                      name="attr_Constitution-roll"
-                      title="CON Normal"
-                      value="&{template:blackhacktest} {{playername=@{NAME}}} {{normaltest=1}} {{testroll=[[1d20]]}} {{abilityname=CON}} {{abilityvalue=@{CON}}}">
-                <img class="sheet-button-img" src="http://i.imgur.com/W1muO5V.png" alt="normal"/>
-              </button>
-              <button class="sheet-button"
-                      type="roll"
-                      name="attr_Constitution-roll-adv"
-                      title="CON with Advantage"
-                      value="&{template:blackhacktest} {{playername=@{NAME}}} {{advantagetest=1}} {{testroll=[[1d20]]}} {{testadvantage=[[1d20]]}} {{abilityname=CON}} {{abilityvalue=@{CON}}}">
-                <img class="sheet-button-img" src="http://i.imgur.com/cCgR356.png" alt="advantage"/>
-              </button>
-              <button class="sheet-button"
-                      type="roll"
-                      name="attr_Constitution-roll-dis"
-                      title="CON with Disadvantage"
-                      value="&{template:blackhacktest} {{playername=@{NAME}}} {{disadvantagetest=1}} {{testroll=[[1d20]]}} {{testdisadvantage=[[1d20]]}} {{abilityname=CON}} {{abilityvalue=@{CON}}}">
-                <img class="sheet-button-img" src="http://i.imgur.com/C6yg00m.png" alt="disadvantage"/>
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <td class="tdattrlabel">WIS</td>
-            <td><input type=number class="sheet-short" name="attr_WIS" value="10"/></td>
-            <td class="sheet-center">
-              <button class="sheet-button"
-                      type="roll"
-                      name="attr_Wisdom-roll"
-                      title="WIS Normal"
-                      value="&{template:blackhacktest} {{playername=@{NAME}}} {{normaltest=1}} {{testroll=[[1d20]]}} {{abilityname=WIS}} {{abilityvalue=@{WIS}}}">
-                <img class="sheet-button-img" src="http://i.imgur.com/W1muO5V.png" alt="normal"/>
-              </button>
-              <button class="sheet-button"
-                      type="roll"
-                      name="attr_Wisdom-roll-adv"
-                      title="WIS with Advantage"
-                      value="&{template:blackhacktest} {{playername=@{NAME}}} {{advantagetest=1}} {{testroll=[[1d20]]}} {{testadvantage=[[1d20]]}} {{abilityname=WIS}} {{abilityvalue=@{WIS}}}">
-                <img class="sheet-button-img" src="http://i.imgur.com/cCgR356.png" alt="advantage"/>
-              </button>
-              <button class="sheet-button"
-                      type="roll"
-                      name="attr_Wisdom-roll-dis"
-                      title="WIS with Disadvantage"
-                      value="&{template:blackhacktest} {{playername=@{NAME}}} {{disadvantagetest=1}} {{testroll=[[1d20]]}} {{testdisadvantage=[[1d20]]}} {{abilityname=WIS}} {{abilityvalue=@{WIS}}}">
-                <img class="sheet-button-img" src="http://i.imgur.com/C6yg00m.png" alt="disadvantage"/>
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <td class="tdattrlabel">INT</td>
-            <td><input type=number class="sheet-short" name="attr_INT" value="10"/></td>
-            <td class="sheet-center">
-              <button class="sheet-button"
-                      type="roll"
-                      name="attr_Intelligence-roll"
-                      title="INT Normal"
-                      value="&{template:blackhacktest} {{playername=@{NAME}}} {{normaltest=1}} {{testroll=[[1d20]]}} {{abilityname=INT}} {{abilityvalue=@{INT}}}">
-                <img class="sheet-button-img" src="http://i.imgur.com/W1muO5V.png"  alt="normal"/>
-              </button>
-              <button class="sheet-button"
-                      type="roll"
-                      name="attr_Intelligence-roll-adv"
-                      title="INT with Advantage"
-                      value="&{template:blackhacktest} {{playername=@{NAME}}} {{advantagetest=1}} {{testroll=[[1d20]]}} {{testadvantage=[[1d20]]}} {{abilityname=INT}} {{abilityvalue=@{INT}}}">
-                <img class="sheet-button-img" src="http://i.imgur.com/cCgR356.png" alt="advantage"/>
-              </button>
-              <button class="sheet-button"
-                      type="roll"
-                      name="attr_Intelligence-roll-dis"
-                      title="INT with Disadvantage"
-                      value="&{template:blackhacktest} {{playername=@{NAME}}} {{disadvantagetest=1}} {{testroll=[[1d20]]}} {{testdisadvantage=[[1d20]]}} {{abilityname=INT}} {{abilityvalue=@{INT}}}">
-                <img class="sheet-button-img" src="http://i.imgur.com/C6yg00m.png" alt="disadvantage"/>
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <td class="tdattrlabel">CHA</td>
-            <td><input type=number class="sheet-short" name="attr_CHA" value="10"/></td>
-            <td class="sheet-center">
-              <button class="sheet-button"
-                      type="roll"
-                      name="attr_Charisma-roll"
-                      title="CHA Normal"
-                      value="&{template:blackhacktest} {{playername=@{NAME}}} {{normaltest=1}} {{testroll=[[1d20]]}} {{abilityname=CHA}} {{abilityvalue=@{CHA}}}">
-                <img class="sheet-button-img" src="http://i.imgur.com/W1muO5V.png" alt="normal"/>
-              </button>
-              <button class="sheet-button"
-                      type="roll"
-                      name="attr_Charisma-roll-adv"
-                      title="CHA with Advantage"
-                      value="&{template:blackhacktest} {{playername=@{NAME}}} {{advantagetest=1}} {{testroll=[[1d20]]}} {{testadvantage=[[1d20]]}} {{abilityname=CHA}} {{abilityvalue=@{CHA}}}">
-                <img class="sheet-button-img" src="http://i.imgur.com/cCgR356.png" alt="advantage"/>
-              </button>
-              <button class="sheet-button"
-                      type="roll"
-                      name="attr_Charisma-roll-dis"
-                      title="CHA with Disadvantage"
-                      value="&{template:blackhacktest} {{playername=@{NAME}}} {{disadvantagetest=1}} {{testroll=[[1d20]]}} {{testdisadvantage=[[1d20]]}} {{abilityname=CHA}} {{abilityvalue=@{CHA}}}">
-                <img class="sheet-button-img" src="http://i.imgur.com/C6yg00m.png" alt="disadvantage"/>
-              </button>
-            </td>
-          </tr>
-        </tabLe>
-      </div>
-    </div>
-    <div class='sheet-col'>
-      <div class="box">
-        <div class="tdattrlabel">SPECIAL FEATURES</div>
-        <textarea class="sheet-textarea" name="attr_FEATURES">Put special features here!</textarea>
-      </div>
-    </div>
-  </div>
-  <div class="sheet-2colrow">
-    <div class='sheet-col'>
-      <div class="box">
-        <div class="tdattrlabel">USAGE ITEMS</div>
-        <table cellpadding=2>
-          <tr>
-            <th class="usagelabel">Have?</th>
-            <th class="usagelabel">Item</th>
-            <th class="usagelabel">Usage Die</th>
-            <th class="usagelabel">Roll</th>
-          </tr>
-          <tr>
-            <td>
-              <center><input type=checkbox name="attr_FRESHRATIONS_EQUIPPED"/></center>
-            </td>
-            <td><div class="usagelabel">Fresh Rations (d4)</div></td>
-            <td>
-              <select class="sheet-usageDieSelect" name="attr_FRESHRATIONSUSAGEDIE" value="4">
-                <option value="4">d4</option>
-                <option value="6">d6</option>
-                <option value="8">d8</option>
-                <option value="10">d10</option>
-                <option value="12">d12</option>
-                <option value="20">d20</option>
-              </select>
-            </td>        
-            <td>
-              <button class="sheet-usageRollButton"
-                      type="roll"
-                      name="attr_FreshRationsUsage-roll"
-                      title="Fresh Rations Usage Roll"
-                      value="&{template:blackhackusage} {{playername=@{NAME}}} {{itemname=Fresh Rations}} {{usagedie=@{FRESHRATIONSUSAGEDIE}}} {{usageroll=[[{1d@{FRESHRATIONSUSAGEDIE}}]]}}">
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <center><input type=checkbox name="attr_IRONRATIONS_EQUIPPED"/></center>
-            </td>
-            <td><div class="usagelabel">Iron Rations (d8)</div></td>
-            <td>
-              <select class="sheet-usageDieSelect" name="attr_IRONRATIONSUSAGEDIE" value="8">
-                <option value="4">d4</option>
-                <option value="6">d6</option>
-                <option value="8">d8</option>
-                <option value="10">d10</option>
-                <option value="12">d12</option>
-                <option value="20">d20</option>
-              </select>
-            </td>        
-            <td>
-              <button class="sheet-usageRollButton"
-                      type="roll"
-                      name="attr_IronRationsUsage-roll"
-                      title="Iron Rations Usage Roll"
-                      value="&{template:blackhackusage} {{playername=@{NAME}}} {{itemname=Iron Rations}} {{usagedie=@{IRONRATIONSUSAGEDIE}}} {{usageroll=[[{1d@{IRONRATIONSUSAGEDIE}}]]}}">
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <center><input type=checkbox name="attr_WINESKIN_EQUIPPED"/></center>
-            </td>
-            <td><div class="usagelabel">Wineskin (d6)</div></td>
-            <td>
-              <select class="sheet-usageDieSelect" name="attr_WINESKINUSAGEDIE" value="6">
-                <option value="4">d4</option>
-                <option value="6">d6</option>
-                <option value="8">d8</option>
-                <option value="10">d10</option>
-                <option value="12">d12</option>
-                <option value="20">d20</option>
-              </select>
-            </td>        
-            <td>
-              <button class="sheet-usageRollButton"
-                      type="roll"
-                      name="attr_WineskinUsage-roll"
-                      title="Wineskin Usage Roll"
-                      value="&{template:blackhackusage} {{playername=@{NAME}}} {{itemname=Wineskin}} {{usagedie=@{WINESKINUSAGEDIE}}} {{usageroll=[[{1d@{WINESKINUSAGEDIE}}]]}}">
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <center><input type=checkbox name="attr_TORCH_EQUIPPED"/></center>
-            </td>
-            <td><div class="usagelabel">Torch (d6)</div></td>
-            <td>
-              <select class="sheet-usageDieSelect" name="attr_TORCHUSAGEDIE" value="6">
-                <option value="4">d4</option>
-                <option value="6">d6</option>
-                <option value="8">d8</option>
-                <option value="10">d10</option>
-                <option value="12">d12</option>
-                <option value="20">d20</option>
-              </select>
-            </td>        
-            <td>
-              <button class="sheet-usageRollButton"
-                      type="roll"
-                      name="attr_TorchUsage-roll"
-                      title="Torch Usage Roll"
-                      value="&{template:blackhackusage} {{playername=@{NAME}}} {{itemname=Torch}} {{usagedie=@{TORCHUSAGEDIE}}} {{usageroll=[[{1d@{TORCHUSAGEDIE}}]]}}">
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <center><input type=checkbox name="attr_ARROWS_EQUIPPED"/></center>
-            </td>
-            <td><div class="usagelabel">Quiver of Arrows (d10)</div></td>
-            <td>
-              <select class="sheet-usageDieSelect" name="attr_ARROWSUSAGEDIE" value="10">
-                <option value="4">d4</option>
-                <option value="6">d6</option>
-                <option value="8">d8</option>
-                <option value="10">d10</option>
-                <option value="12">d12</option>
-                <option value="20">d20</option>
-              </select>
-            </td>        
-            <td>
-              <button class="sheet-usageRollButton"
-                      type="roll"
-                      name="attr_ArrowsUsage-roll"
-                      title="Quiver of Arrows Usage Roll"
-                      value="&{template:blackhackusage} {{playername=@{NAME}}} {{itemname=Quiver of Arrows}} {{usagedie=@{ARROWSUSAGEDIE}}} {{usageroll=[[{1d@{ARROWSUSAGEDIE}}]]}}">
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <center><input type=checkbox name="attr_BOLTS_EQUIPPED"/></center>
-            </td>
-            <td><div class="usagelabel">Case of Bolts (d10)</div></td>
-            <td>
-              <select class="sheet-usageDieSelect" name="attr_BOLTSUSAGEDIE" value="10">
-                <option value="4">d4</option>
-                <option value="6">d6</option>
-                <option value="8">d8</option>
-                <option value="10">d10</option>
-                <option value="12">d12</option>
-                <option value="20">d20</option>
-              </select>
-            </td>        
-            <td>
-              <button class="sheet-usageRollButton"
-                      type="roll"
-                      name="attr_BoltsUsage-roll"
-                      title="Case of Bolts Usage Roll"
-                      value="&{template:blackhackusage} {{playername=@{NAME}}} {{itemname=Case of Bolts}} {{usagedie=@{BOLTSUSAGEDIE}}} {{usageroll=[[{1d@{BOLTSUSAGEDIE}}]]}}">
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <center><input type=checkbox name="attr_HERBS_EQUIPPED"/></center>
-            </td>
-            <td><div class="usagelabel">Common Herbs (d8)</div></td>
-            <td>
-              <select class="sheet-usageDieSelect" name="attr_HERBSUSAGEDIE" value="8">
-                <option value="4">d4</option>
-                <option value="6">d6</option>
-                <option value="8">d8</option>
-                <option value="10">d10</option>
-                <option value="12">d12</option>
-                <option value="20">d20</option>
-              </select>
-            </td>        
-            <td>
-              <button class="sheet-usageRollButton"
-                      type="roll"
-                      name="attr_HerbsUsage-roll"
-                      title="Common Herbs Usage Roll"
-                      value="&{template:blackhackusage} {{playername=@{NAME}}} {{itemname=Common Herbs}} {{usagedie=@{HERBSUSAGEDIE}}} {{usageroll=[[{1d@{HERBSUSAGEDIE}}]]}}">
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <center><input type=checkbox name="attr_FLASKOFOIL_EQUIPPED"/></center>
-            </td>
-            <td><div class="usagelabel">Flask of Oil (d6)</div></td>
-            <td>
-              <select class="sheet-usageDieSelect" name="attr_FLASKOFOILUSAGEDIE" value="6">
-                <option value="4">d4</option>
-                <option value="6">d6</option>
-                <option value="8">d8</option>
-                <option value="10">d10</option>
-                <option value="12">d12</option>
-                <option value="20">d20</option>
-              </select>
-            </td>        
-            <td>
-              <button class="sheet-usageRollButton"
-                      type="roll"
-                      name="attr_FlaskofOilUsage-roll"
-                      title="Flask of Oil Usage Roll"
-                      value="&{template:blackhackusage} {{playername=@{NAME}}} {{itemname=Flask of Oil}} {{usagedie=@{FLASKOFOILUSAGEDIE}}} {{usageroll=[[{1d@{FLASKOFOILUSAGEDIE}}]]}}">
-              </button>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <center><input type=checkbox name="attr_HOLYWATER_EQUIPPED"/></center>
-            </td>
-            <td><div class="usagelabel">Holy Water (d4)</div></td>
-            <td>
-              <select class="sheet-usageDieSelect" name="attr_HOLYWATERUSAGEDIE" value="4">
-                <option value="4">d4</option>
-                <option value="6">d6</option>
-                <option value="8">d8</option>
-                <option value="10">d10</option>
-                <option value="12">d12</option>
-                <option value="20">d20</option>
-              </select>
-            </td>        
-            <td>
-              <button class="sheet-usageRollButton"
-                      type="roll"
-                      name="attr_HolyWaterUsage-roll"
-                      title="Holy Water Usage Roll"
-                      value="&{template:blackhackusage} {{playername=@{NAME}}} {{itemname=Holy Water}} {{usagedie=@{HOLYWATERUSAGEDIE}}} {{usageroll=[[{1d@{HOLYWATERUSAGEDIE}}]]}}">
-            </button>
-            </td>
-          </tr>
+<div class="all">
+    <img class="bhLogo" "src="http://i.imgur.com/R9Ye3vQ.png"/>
+    <div class="summaryBox">
+        <table cellpadding=3>
+            <tr>
+                <td align="right" class="tdSummaryLabel">Name</td>
+                <td colspan="3"><input type="text" class="text" name="attr_NAME"/></td>
+                <td align="right" class="tdSummaryLabel">Class</td>
+                <td>
+                    <select class="classSelect" name="attr_CLASS">
+                        <option value="warrior">Warrior</option>
+                        <option value="thief">Thief</option>
+                        <option value="cleric">Cleric</option>
+                        <option value="conjurer">Conjurer</option>
+                        <option value="dwarf">Dwarf</option>
+                        <option value="elf">Elf</option>
+                        <option value="halfling">Halfling</option>
+                    </select>
+                </td>
+                <td align="right" class="tdSummaryLabel">Level</td>
+                <td colspan="2"><input type=number class="number" name="attr_LEVEL" value="1"/></td>
+            </tr>
+            <tr>
+                <td align="right" class="tdSummaryLabel">Hit Points</td>
+                <td><input type=number class="number" name="attr_HP"/></td>
+                <td align="right" class="tdSummaryLabel">Damage</td>
+                <td><input type=number class="number" name="attr_DAMAGE"/></td>
+                <td align="right" class="tdSummaryLabel">Hit Die</td>
+                <td>
+                    <select class="hitDieSelect" name="attr_HD">
+                        <option value="d4">d4</option>
+                        <option value="d6">d6</option>
+                        <option value="d8">d8</option>
+                        <option value="d10">d10</option>
+                        <option value="d12">d12</option>
+                    </select>
+                </td>        
+                <td align="right" class="tdSummaryLabel">Attack Damage</td>
+                <td>
+                    <select class="attackDamageSelect" name="attr_ATTACK_DAMAGE_NORMAL">
+                        <option value="1d4">1d4</option>
+                        <option value="1d6">1d6</option>
+                        <option value="1d8">1d8</option>
+                    </select>
+                </td>        
+                <td>
+                    <select class="attackDamageSelect" name="attr_ATTACK_DAMAGE_UNARMED">
+                        <option value="1">1</option>
+                        <option value="1d4">1d4</option>
+                        <option value="1d6">1d6</option>
+                        <option value="1d8">1d8</option>
+                    </select>
+                </td>        
+            </tr>
         </table>
-      </div>
     </div>
-    <div class='sheet-col'>
-      <div class="box">
-        <div class="tdattrlabel">GEAR</div>
-        <textarea class="sheet-gearTextArea" name="attr_GEAR">Put gear here!</textarea>
-      </div>
+    <div>
+        <table class="quadcell">
+            <tr>
+                <td class="attributesBox">
+                    <table cellpadding=3>
+                        <tr>
+                            <th align="left" class="boxHeader" colspan="3">ATTRIBUTES</th>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <th></th>
+                            <th class="plusMinusToRollHeader">+/- Mod</th>
+                            <th class="attributesHeader">Normal / Adv / Disadv</th>
+                            <th class="attributesHeader">Dam/SA/+Dam</th>
+                        </tr>
+                        <tr>
+                            <td><div class="tdAttrLabel">STR</div></td>
+                            <td><input type="number" size="2" class="attributeInput" name="attr_STR" value="10"/></td>
+                            <td><input type="number" size="2" class="modifierInput" name="attr_STR_MOD" value="0"/></td>
+                            <td class="center">
+                                <button class="attrButton"
+                                    type="roll"
+                                    name="attr_Strength-roll"
+                                    title="STR Normal"
+                                    value="&{template:blackhacktest} {{playername=@{NAME}}} {{normaltest=1}} {{testroll=[[1d20+@{STR_MOD}]]}} {{abilityname=STR}} {{abilityvalue=@{STR}}} @{StrDamageFlag} {{damage=[[@{ATTACK_DAMAGE_NORMAL}+@{StrPlusToDamage}]] | [[@{ATTACK_DAMAGE_UNARMED}+@{StrPlusToDamage}]]}} @{StrSaDamageFlag} {{sadamage=[[@{ATTACK_DAMAGE_NORMAL}+@{ATTACK_DAMAGE_NORMAL}+@{LEVEL}+@{StrPlusToDamage}]] | [[@{ATTACK_DAMAGE_UNARMED}+@{ATTACK_DAMAGE_UNARMED}+@{LEVEL}+@{StrPlusToDamage}]]}}">
+                                    <img class="buttonImg" src="http://i.imgur.com/W1muO5V.png" alt="normal"/>
+                                </button>
+                                <button class="attrButton"
+                                    type="roll"
+                                    name="attr_Strength-roll-adv"
+                                    title="STR with Advantage"
+                                    value="&{template:blackhacktest} {{playername=@{NAME}}} {{advantagetest=1}} {{testroll=[[1d20+@{STR_MOD}]]}} {{testadvantage=[[1d20+@{STR_MOD}]]}} {{abilityname=STR}} {{abilityvalue=@{STR}}} @{StrDamageFlag} {{damage=[[@{ATTACK_DAMAGE_NORMAL}+@{StrPlusToDamage}]] | [[@{ATTACK_DAMAGE_UNARMED}+@{StrPlusToDamage}]]}} @{StrSaDamageFlag} {{sadamage=[[@{ATTACK_DAMAGE_NORMAL}+@{ATTACK_DAMAGE_NORMAL}+@{LEVEL}+@{StrPlusToDamage}]] | [[@{ATTACK_DAMAGE_UNARMED}+@{ATTACK_DAMAGE_UNARMED}+@{LEVEL}+@{StrPlusToDamage}]]}}">
+                                    <img class="buttonImg" src="http://i.imgur.com/cCgR356.png" alt="advantage"/>
+                                </button>
+                                <button class="attrButton"
+                                    type="roll"
+                                    name="attr_Strength-roll-dis"
+                                    title="STR with Disadvantage"
+                                    value="&{template:blackhacktest} {{playername=@{NAME}}} {{disadvantagetest=1}} {{testroll=[[1d20+@{STR_MOD}]]}} {{testdisadvantage=[[1d20+@{STR_MOD}]]}} {{abilityname=STR}} {{abilityvalue=@{STR}}} @{StrDamageFlag} {{damage=[[@{ATTACK_DAMAGE_NORMAL}+@{StrPlusToDamage}]] | [[@{ATTACK_DAMAGE_UNARMED}+@{StrPlusToDamage}]]}} @{StrSaDamageFlag} {{sadamage=[[@{ATTACK_DAMAGE_NORMAL}+@{ATTACK_DAMAGE_NORMAL}+@{LEVEL}+@{StrPlusToDamage}]] | [[@{ATTACK_DAMAGE_UNARMED}+@{ATTACK_DAMAGE_UNARMED}+@{LEVEL}+@{StrPlusToDamage}]]}}">
+                                    <img class="buttonImg" src="http://i.imgur.com/C6yg00m.png" alt="disadvantage"/>
+                                </button>
+                            </td>
+                            <td>
+                                <span class="extraDamage">
+                                    <input name="attr_StrDamageFlag" type="checkbox" value="{{damageflag=1}}" checked="true" />/
+                                    <input name="attr_StrSaDamageFlag" type="checkbox" value="{{sadamageflag=1}}" checked="true" />/
+                                    <input name="attr_StrPlusToDamage" type="number" size="2" class="plusToDamageInput" value="0"/>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdAttrLabel">DEX</td>
+                            <td><input type="number" size="2" class="attributeInput" name="attr_DEX" value="10"/></td>
+                            <td><input type="number" size="2" class="modifierInput" name="attr_DEX_MOD" value="0"/></td>
+                            <td class="center">
+                                <button class="attrButton"
+                                    type="roll"
+                                    name="attr_Dexterity-roll"
+                                    title="DEX Normal"
+                                    value="&{template:blackhacktest} {{playername=@{NAME}}} {{normaltest=1}} {{testroll=[[1d20+@{DEX_MOD}]]}} {{abilityname=DEX}} {{abilityvalue=@{DEX}}} @{DexDamageFlag} {{damage=[[@{ATTACK_DAMAGE_NORMAL}+@{DexPlusToDamage}]] | [[@{ATTACK_DAMAGE_UNARMED}+@{DexPlusToDamage}]]}} @{DexSaDamageFlag} {{sadamage=[[@{ATTACK_DAMAGE_NORMAL}+@{ATTACK_DAMAGE_NORMAL}+@{LEVEL}+@{DexPlusToDamage}]] | [[@{ATTACK_DAMAGE_UNARMED}+@{ATTACK_DAMAGE_UNARMED}+@{LEVEL}+@{DexPlusToDamage}]]}}">
+                                    <img class="buttonImg" src="http://i.imgur.com/W1muO5V.png" alt="normal"/>
+                                </button>
+                                <button class="attrButton"
+                                    type="roll"
+                                    name="attr_Dexterity-roll-adv"
+                                    title="DEX with Advantage"
+                                    value="&{template:blackhacktest} {{playername=@{NAME}}} {{advantagetest=1}} {{testroll=[[1d20+@{DEX_MOD}]]}} {{testadvantage=[[1d20+@{DEX_MOD}]]}} {{abilityname=DEX}} {{abilityvalue=@{DEX}}} @{DexDamageFlag} {{damage=[[@{ATTACK_DAMAGE_NORMAL}+@{DexPlusToDamage}]] | [[@{ATTACK_DAMAGE_UNARMED}+@{DexPlusToDamage}]]}} @{DexSaDamageFlag} {{sadamage=[[@{ATTACK_DAMAGE_NORMAL}+@{ATTACK_DAMAGE_NORMAL}+@{LEVEL}+@{DexPlusToDamage}]] | [[@{ATTACK_DAMAGE_UNARMED}+@{ATTACK_DAMAGE_UNARMED}+@{LEVEL}+@{DexPlusToDamage}]]}}">
+                                    <img class="buttonImg" src="http://i.imgur.com/cCgR356.png" alt="advantage"/>
+                                </button>
+                                <button class="attrButton"
+                                    type="roll"
+                                    name="attr_Dexterity-roll-dis"
+                                    title="DEX with Disadvantage"
+                                    value="&{template:blackhacktest} {{playername=@{NAME}}} {{disadvantagetest=1}} {{testroll=[[1d20+@{DEX_MOD}]]}} {{testdisadvantage=[[1d20+@{DEX_MOD}]]}} {{abilityname=DEX}} {{abilityvalue=@{DEX}}} @{DexDamageFlag} {{damage=[[@{ATTACK_DAMAGE_NORMAL}+@{DexPlusToDamage}]] | [[@{ATTACK_DAMAGE_UNARMED}+@{DexPlusToDamage}]]}} @{DexSaDamageFlag} {{sadamage=[[@{ATTACK_DAMAGE_NORMAL}+@{ATTACK_DAMAGE_NORMAL}+@{LEVEL}+@{DexPlusToDamage}]] | [[@{ATTACK_DAMAGE_UNARMED}+@{ATTACK_DAMAGE_UNARMED}+@{LEVEL}+@{DexPlusToDamage}]]}}">
+                                    <img class="buttonImg" src="http://i.imgur.com/C6yg00m.png" alt="disadvantage"/>
+                                </button>
+                            </td>
+                            <td>
+                                <span class="extraDamage">
+                                    <input name="attr_DexDamageFlag" type="checkbox" value="{{damageflag=1}}" checked="false" />/
+                                    <input name="attr_DexSaDamageFlag" type="checkbox" value="{{sadamageflag=1}}" checked="false" />/
+                                    <input name="attr_DexPlusToDamage" type="number" size="2" class="plusToDamageInput" value="0"/>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdAttrLabel">CON</td>
+                            <td><input type="number" size="2" class="attributeInput" name="attr_CON" value="10"/></td>
+                            <td><input type="number" size="1" class="modifierInput" name="attr_CON_MOD" value="0"/></td>
+                            <td class="center">
+                                <button class="attrButton"
+                                    type="roll"
+                                    name="attr_Constitution-roll"
+                                    title="CON Normal"
+                                    value="&{template:blackhacktest} {{playername=@{NAME}}} {{normaltest=1}} {{testroll=[[1d20+@{CON_MOD}]]}} {{abilityname=CON}} {{abilityvalue=@{CON}}}">
+                                    <img class="buttonImg" src="http://i.imgur.com/W1muO5V.png" alt="normal"/>
+                                </button>
+                                <button class="attrButton"
+                                    type="roll"
+                                    name="attr_Constitution-roll-adv"
+                                    title="CON with Advantage"
+                                    value="&{template:blackhacktest} {{playername=@{NAME}}} {{advantagetest=1}} {{testroll=[[1d20+@{CON_MOD}]]}} {{testadvantage=[[1d20+@{CON_MOD}]]}} {{abilityname=CON}} {{abilityvalue=@{CON}}}">
+                                    <img class="buttonImg" src="http://i.imgur.com/cCgR356.png" alt="advantage"/>
+                                </button>
+                                <button class="attrButton"
+                                    type="roll"
+                                    name="attr_Constitution-roll-dis"
+                                    title="CON with Disadvantage"
+                                    value="&{template:blackhacktest} {{playername=@{NAME}}} {{disadvantagetest=1}} {{testroll=[[1d20+@{CON_MOD}]]}} {{testdisadvantage=[[1d20+@{CON_MOD}]]}} {{abilityname=CON}} {{abilityvalue=@{CON}}}">
+                                    <img class="buttonImg" src="http://i.imgur.com/C6yg00m.png" alt="disadvantage"/>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdAttrLabel">WIS</td>
+                            <td><input type="number" size="2" class="attributeInput" name="attr_WIS" value="10"/></td>
+                            <td><input type="number" size="1" class="modifierInput" name="attr_WIS_MOD" value="0"/></td>
+                            <td class="center">
+                                <button class="attrButton"
+                                    type="roll"
+                                    name="attr_Wisdom-roll"
+                                    title="WIS Normal"
+                                    value="&{template:blackhacktest} {{playername=@{NAME}}} {{normaltest=1}} {{testroll=[[1d20+@{WIS_MOD}]]}} {{abilityname=WIS}} {{abilityvalue=@{WIS}}}">
+                                    <img class="buttonImg" src="http://i.imgur.com/W1muO5V.png" alt="normal"/>
+                                </button>
+                                <button class="attrButton"
+                                    type="roll"
+                                    name="attr_Wisdom-roll-adv"
+                                    title="WIS with Advantage"
+                                    value="&{template:blackhacktest} {{playername=@{NAME}}} {{advantagetest=1}} {{testroll=[[1d20+@{WIS_MOD}]]}} {{testadvantage=[[1d20+@{WIS_MOD}]]}} {{abilityname=WIS}} {{abilityvalue=@{WIS}}}">
+                                    <img class="buttonImg" src="http://i.imgur.com/cCgR356.png" alt="advantage"/>
+                                </button>
+                                <button class="attrButton"
+                                    type="roll"
+                                    name="attr_Wisdom-roll-dis"
+                                    title="WIS with Disadvantage"
+                                    value="&{template:blackhacktest} {{playername=@{NAME}}} {{disadvantagetest=1}} {{testroll=[[1d20+@{WIS_MOD}]]}} {{testdisadvantage=[[1d20+@{WIS_MOD}]]}} {{abilityname=WIS}} {{abilityvalue=@{WIS}}}">
+                                    <img class="buttonImg" src="http://i.imgur.com/C6yg00m.png" alt="disadvantage"/>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdAttrLabel">INT</td>
+                            <td><input type="number" size="2" class="attributeInput" name="attr_INT" value="10"/></td>
+                            <td><input type="number" size="1" class="modifierInput" name="attr_INT_MOD" value="0"/></td>
+                            <td class="center">
+                                <button class="attrButton"
+                                    type="roll"
+                                    name="attr_Intelligence-roll"
+                                    title="INT Normal"
+                                    value="&{template:blackhacktest} {{playername=@{NAME}}} {{normaltest=1}} {{testroll=[[1d20+@{INT_MOD}]]}} {{abilityname=INT}} {{abilityvalue=@{INT}}}">
+                                    <img class="buttonImg" src="http://i.imgur.com/W1muO5V.png"  alt="normal"/>
+                                </button>
+                                <button class="attrButton"
+                                    type="roll"
+                                    name="attr_Intelligence-roll-adv"
+                                    title="INT with Advantage"
+                                    value="&{template:blackhacktest} {{playername=@{NAME}}} {{advantagetest=1}} {{testroll=[[1d20+@{INT_MOD}]]}} {{testadvantage=[[1d20+@{INT_MOD}]]}} {{abilityname=INT}} {{abilityvalue=@{INT}}}">
+                                    <img class="buttonImg" src="http://i.imgur.com/cCgR356.png" alt="advantage"/>
+                                </button>
+                                <button class="attrButton"
+                                    type="roll"
+                                    name="attr_Intelligence-roll-dis"
+                                    title="INT with Disadvantage"
+                                    value="&{template:blackhacktest} {{playername=@{NAME}}} {{disadvantagetest=1}} {{testroll=[[1d20+@{INT_MOD}]]}} {{testdisadvantage=[[1d20+@{INT_MOD}]]}} {{abilityname=INT}} {{abilityvalue=@{INT}}}">
+                                    <img class="buttonImg" src="http://i.imgur.com/C6yg00m.png" alt="disadvantage"/>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="tdAttrLabel">CHA</td>
+                            <td><input type="number" size="2" class="attributeInput" name="attr_CHA" value="10"/></td>
+                            <td><input type="number" size="1" class="modifierInput" name="attr_CHA_MOD" value="0"/></td>
+                            <td class="center">
+                            <button class="attrButton"
+                                type="roll"
+                                name="attr_Charisma-roll"
+                                title="CHA Normal"
+                                value="&{template:blackhacktest} {{playername=@{NAME}}} {{normaltest=1}} {{testroll=[[1d20+@{CHA_MOD}]]}} {{abilityname=CHA}} {{abilityvalue=@{CHA}}}">
+                                <img class="buttonImg" src="http://i.imgur.com/W1muO5V.png" alt="normal"/>
+                            </button>
+                            <button class="attrButton"
+                                type="roll"
+                                name="attr_Charisma-roll-adv"
+                                title="CHA with Advantage"
+                                value="&{template:blackhacktest} {{playername=@{NAME}}} {{advantagetest=1}} {{testroll=[[1d20+@{CHA_MOD}]]}} {{testadvantage=[[1d20+@{CHA_MOD}]]}} {{abilityname=CHA}} {{abilityvalue=@{CHA}}}">
+                                <img class="buttonImg" src="http://i.imgur.com/cCgR356.png" alt="advantage"/>
+                            </button>
+                            <button class="attrButton"
+                                type="roll"
+                                name="attr_Charisma-roll-dis"
+                                title="CHA with Disadvantage"
+                                value="&{template:blackhacktest} {{playername=@{NAME}}} {{disadvantagetest=1}} {{testroll=[[1d20+@{CHA_MOD}]]}} {{testdisadvantage=[[1d20+@{CHA_MOD}]]}} {{abilityname=CHA}} {{abilityvalue=@{CHA}}}">
+                                <img class="buttonImg" src="http://i.imgur.com/C6yg00m.png" alt="disadvantage"/>
+                            </button>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="specialFeaturesBox">
+                    <div class="boxHeader">SPECIAL FEATURES</div>
+                    <textarea class="specialFeaturesTextArea" name="attr_FEATURES">Put special features here!</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td class="usageItemsBox">
+                    <div class="boxHeader">USAGE ITEMS</div>
+                    <table  align="center" cellpadding=2>
+                        <tr>
+                            <th class="thUsageLabel">Have?</th>
+                            <th class="thUsageLabel">Item</th>
+                            <th class="thUsageLabel">Usage Die</th>
+                            <th class="thUsageLabel">Roll</th>
+                        </tr>
+                        <tr>
+                            <td align="center"><input class="usageDieEquippedCheckbox" type=checkbox name="attr_ARROWS_EQUIPPED"/></td>
+                            <td align="center"><div class="tdUsageLabel">Quiver of Arrows (d10)</div></td>
+                            <td align="center">
+                                <select class="usageDieSelect" name="attr_ARROWSUSAGEDIE" value="10">
+                                    <option value="4">d4</option>
+                                    <option value="6">d6</option>
+                                    <option value="8">d8</option>
+                                    <option value="10">d10</option>
+                                    <option value="12">d12</option>
+                                    <option value="20">d20</option>
+                                </select>
+                            </td>        
+                            <td align="center">
+                                <button class="usageRollButton"
+                                    type="roll"
+                                    name="attr_ArrowsUsage-roll"
+                                    title="Quiver of Arrows Usage Roll"
+                                    value="&{template:blackhackusage} {{playername=@{NAME}}} {{itemname=Quiver of Arrows}} {{usagedie=@{ARROWSUSAGEDIE}}} {{usageroll=[[{1d@{ARROWSUSAGEDIE}}]]}}">
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center"><input class="usageDieEquippedCheckbox" type=checkbox name="attr_BOLTS_EQUIPPED"/></td>
+                            <td align="center"><div class="tdUsageLabel">Case of Bolts (d10)</div></td>
+                            <td align="center">
+                                <select class="usageDieSelect" name="attr_BOLTSUSAGEDIE" value="10">
+                                    <option value="4">d4</option>
+                                    <option value="6">d6</option>
+                                    <option value="8">d8</option>
+                                    <option value="10">d10</option>
+                                    <option value="12">d12</option>
+                                    <option value="20">d20</option>
+                                </select>
+                            </td>        
+                            <td align="center">
+                                <button class="usageRollButton"
+                                    type="roll"
+                                    name="attr_BoltsUsage-roll"
+                                    title="Case of Bolts Usage Roll"
+                                    value="&{template:blackhackusage} {{playername=@{NAME}}} {{itemname=Case of Bolts}} {{usagedie=@{BOLTSUSAGEDIE}}} {{usageroll=[[{1d@{BOLTSUSAGEDIE}}]]}}">
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center"><input class="usageDieEquippedCheckbox" type=checkbox name="attr_THROWING_DAGGERS_EQUIPPED"/></td>
+                            <td align="center"><div class="tdUsageLabel">Throwing Daggers (d8)</div></td>
+                            <td align="center">
+                                <select class="usageDieSelect" name="attr_DAGGERSUSAGEDIE" value="8">
+                                    <option value="4">d4</option>
+                                    <option value="6">d6</option>
+                                    <option value="8">d8</option>
+                                    <option value="10">d10</option>
+                                    <option value="12">d12</option>
+                                    <option value="20">d20</option>
+                                </select>
+                            </td>        
+                            <td align="center">
+                                <button class="usageRollButton"
+                                    type="roll"
+                                    name="attr_DaggersUsage-roll"
+                                    title="Daggers Usage Roll"
+                                    value="&{template:blackhackusage} {{playername=@{NAME}}} {{itemname=Throwing Daggers}} {{usagedie=@{DAGGERSUSAGEDIE}}} {{usageroll=[[{1d@{DAGGERSUSAGEDIE}}]]}}">
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center"><input class="usageDieEquippedCheckbox" type=checkbox name="attr_STONES_EQUIPPED"/></td>
+                            <td align="center"><div class="tdUsageLabel">Sling Stones (d8)</div></td>
+                            <td align="center">
+                                <select class="usageDieSelect" name="attr_STONESUSAGEDIE" value="8">
+                                    <option value="4">d4</option>
+                                    <option value="6">d6</option>
+                                    <option value="8">d8</option>
+                                    <option value="10">d10</option>
+                                    <option value="12">d12</option>
+                                    <option value="20">d20</option>
+                                </select>
+                            </td>        
+                            <td align="center">
+                                <button class="usageRollButton"
+                                    type="roll"
+                                    name="attr_StonesUsage-roll"
+                                    title="Sling Stones Usage Roll"
+                                    value="&{template:blackhackusage} {{playername=@{NAME}}} {{itemname=Sling Stones}} {{usagedie=@{STONESUSAGEDIE}}} {{usageroll=[[{1d@{STONESUSAGEDIE}}]]}}">
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center"><input class="usageDieEquippedCheckbox" type=checkbox name="attr_FRESHRATIONS_EQUIPPED"/></td>
+                            <td align="center"><div class="tdUsageLabel">Fresh Rations (d4)</div></td>
+                            <td align="center">
+                                <select class="usageDieSelect" name="attr_FRESHRATIONSUSAGEDIE" value="4">
+                                    <option value="4">d4</option>
+                                    <option value="6">d6</option>
+                                    <option value="8">d8</option>
+                                    <option value="10">d10</option>
+                                    <option value="12">d12</option>
+                                    <option value="20">d20</option>
+                                </select>
+                            </td>        
+                            <td align="center">
+                                <button class="usageRollButton"
+                                    type="roll"
+                                    name="attr_FreshRationsUsage-roll"
+                                    title="Fresh Rations Usage Roll"
+                                    value="&{template:blackhackusage} {{playername=@{NAME}}} {{itemname=Fresh Rations}} {{usagedie=@{FRESHRATIONSUSAGEDIE}}} {{usageroll=[[{1d@{FRESHRATIONSUSAGEDIE}}]]}}">
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center"><input class="usageDieEquippedCheckbox" type=checkbox name="attr_IRONRATIONS_EQUIPPED"/></td>
+                            <td align="center"><div class="tdUsageLabel">Iron Rations (d8)</div></td>
+                            <td align="center">
+                                <select class="usageDieSelect" name="attr_IRONRATIONSUSAGEDIE" value="8">
+                                    <option value="4">d4</option>
+                                    <option value="6">d6</option>
+                                    <option value="8">d8</option>
+                                    <option value="10">d10</option>
+                                    <option value="12">d12</option>
+                                    <option value="20">d20</option>
+                                </select>
+                            </td>        
+                            <td align="center">
+                                <button class="usageRollButton"
+                                    type="roll"
+                                    name="attr_IronRationsUsage-roll"
+                                    title="Iron Rations Usage Roll"
+                                    value="&{template:blackhackusage} {{playername=@{NAME}}} {{itemname=Iron Rations}} {{usagedie=@{IRONRATIONSUSAGEDIE}}} {{usageroll=[[{1d@{IRONRATIONSUSAGEDIE}}]]}}">
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center"><input class="usageDieEquippedCheckbox" type=checkbox name="attr_WINESKIN_EQUIPPED"/></td>
+                            <td align="center"><div class="tdUsageLabel">Wineskin (d6)</div></td>
+                            <td align="center">
+                                <select class="usageDieSelect" name="attr_WINESKINUSAGEDIE" value="6">
+                                    <option value="4">d4</option>
+                                    <option value="6">d6</option>
+                                    <option value="8">d8</option>
+                                    <option value="10">d10</option>
+                                    <option value="12">d12</option>
+                                    <option value="20">d20</option>
+                                </select>
+                            </td>        
+                            <td align="center">
+                                <button class="usageRollButton"
+                                    type="roll"
+                                    name="attr_WineskinUsage-roll"
+                                    title="Wineskin Usage Roll"
+                                    value="&{template:blackhackusage} {{playername=@{NAME}}} {{itemname=Wineskin}} {{usagedie=@{WINESKINUSAGEDIE}}} {{usageroll=[[{1d@{WINESKINUSAGEDIE}}]]}}">
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center"><center><input class="usageDieEquippedCheckbox" type=checkbox name="attr_TORCH_EQUIPPED"/></center></td>
+                            <td align="center"><div class="tdUsageLabel">Torch (d6)</div></td>
+                            <td align="center">
+                                <select class="usageDieSelect" name="attr_TORCHUSAGEDIE" value="6">
+                                    <option value="4">d4</option>
+                                    <option value="6">d6</option>
+                                    <option value="8">d8</option>
+                                    <option value="10">d10</option>
+                                    <option value="12">d12</option>
+                                    <option value="20">d20</option>
+                                </select>
+                            </td>        
+                            <td align="center">
+                                <button class="usageRollButton"
+                                    type="roll"
+                                    name="attr_TorchUsage-roll"
+                                    title="Torch Usage Roll"
+                                    value="&{template:blackhackusage} {{playername=@{NAME}}} {{itemname=Torch}} {{usagedie=@{TORCHUSAGEDIE}}} {{usageroll=[[{1d@{TORCHUSAGEDIE}}]]}}">
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center"><input class="usageDieEquippedCheckbox" type=checkbox name="attr_FLASKOFOIL_EQUIPPED"/></td>
+                            <td align="center"><div class="tdUsageLabel">Flask of Oil (d6)</div></td>
+                            <td align="center">
+                                <select class="usageDieSelect" name="attr_FLASKOFOILUSAGEDIE" value="6">
+                                    <option value="4">d4</option>
+                                    <option value="6">d6</option>
+                                    <option value="8">d8</option>
+                                    <option value="10">d10</option>
+                                    <option value="12">d12</option>
+                                    <option value="20">d20</option>
+                                </select>
+                            </td>        
+                            <td align="center">
+                                <button class="usageRollButton"
+                                    type="roll"
+                                    name="attr_FlaskofOilUsage-roll"
+                                    title="Flask of Oil Usage Roll"
+                                    value="&{template:blackhackusage} {{playername=@{NAME}}} {{itemname=Flask of Oil}} {{usagedie=@{FLASKOFOILUSAGEDIE}}} {{usageroll=[[{1d@{FLASKOFOILUSAGEDIE}}]]}}">
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center"><input class="usageDieEquippedCheckbox" type=checkbox name="attr_HOLYWATER_EQUIPPED"/></td>
+                            <td align="center"><div class="tdUsageLabel">Holy Water (d4)</div></td>
+                            <td align="center">
+                                <select class="usageDieSelect" name="attr_HOLYWATERUSAGEDIE" value="4">
+                                    <option value="4">d4</option>
+                                    <option value="6">d6</option>
+                                    <option value="8">d8</option>
+                                    <option value="10">d10</option>
+                                    <option value="12">d12</option>
+                                    <option value="20">d20</option>
+                                </select>
+                            </td>        
+                            <td align="center">
+                                <button class="usageRollButton"
+                                    type="roll"
+                                    name="attr_HolyWaterUsage-roll"
+                                    title="Holy Water Usage Roll"
+                                    value="&{template:blackhackusage} {{playername=@{NAME}}} {{itemname=Holy Water}} {{usagedie=@{HOLYWATERUSAGEDIE}}} {{usageroll=[[{1d@{HOLYWATERUSAGEDIE}}]]}}">
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center"><input class="usageDieEquippedCheckbox" type=checkbox name="attr_HERBS_EQUIPPED"/></td>
+                            <td align="center"><div class="tdUsageLabel">Common Herbs (d8)</div></td>
+                            <td align="center">
+                                <select class="usageDieSelect" name="attr_HERBSUSAGEDIE" value="8">
+                                    <option value="4">d4</option>
+                                    <option value="6">d6</option>
+                                    <option value="8">d8</option>
+                                    <option value="10">d10</option>
+                                    <option value="12">d12</option>
+                                    <option value="20">d20</option>
+                                </select>
+                            </td>        
+                            <td align="center">
+                                <button class="usageRollButton"
+                                    type="roll"
+                                    name="attr_HerbsUsage-roll"
+                                    title="Common Herbs Usage Roll"
+                                    value="&{template:blackhackusage} {{playername=@{NAME}}} {{itemname=Common Herbs}} {{usagedie=@{HERBSUSAGEDIE}}} {{usageroll=[[{1d@{HERBSUSAGEDIE}}]]}}">
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center"><input class="usageDieEquippedCheckbox" type=checkbox name="attr_CUSTOM_ITEM_1_EQUIPPED"/></td>
+                            <td align="center"><input type=text name="attr_CUSTOM_ITEM_1_NAME"/></td>
+                            <td align="center">
+                                <select class="usageDieSelect" name="attr_CUSTOM1USAGEDIE" value="8">
+                                    <option value="4">d4</option>
+                                    <option value="6">d6</option>
+                                    <option value="8">d8</option>
+                                    <option value="10">d10</option>
+                                    <option value="12">d12</option>
+                                    <option value="20">d20</option>
+                                </select>
+                            </td>        
+                            <td align="center">
+                                <button class="usageRollButton"
+                                    type="roll"
+                                    name="attr_Custom1Usage-roll"
+                                    title="Custom 1 Usage Roll"
+                                    value="&{template:blackhackusage} {{playername=@{NAME}}} {{itemname=@{CUSTOM_ITEM_1_NAME}}} {{usagedie=@{CUSTOM1USAGEDIE}}} {{usageroll=[[{1d@{CUSTOM1USAGEDIE}}]]}}">
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center"><input class="usageDieEquippedCheckbox" type=checkbox name="attr_CUSTOM_ITEM_2_EQUIPPED"/></td>
+                            <td align="center"><input type=text name="attr_CUSTOM_ITEM_2_NAME"/></td>
+                            <td align="center">
+                                <select class="usageDieSelect" name="attr_CUSTOM2USAGEDIE" value="8">
+                                    <option value="4">d4</option>
+                                    <option value="6">d6</option>
+                                    <option value="8">d8</option>
+                                    <option value="10">d10</option>
+                                    <option value="12">d12</option>
+                                    <option value="20">d20</option>
+                                </select>
+                            </td>        
+                            <td align="center">
+                                <button class="usageRollButton"
+                                    type="roll"
+                                    name="attr_Custom2Usage-roll"
+                                    title="Custom 2 Usage Roll"
+                                    value="&{template:blackhackusage} {{playername=@{NAME}}} {{itemname=@{CUSTOM_ITEM_2_NAME}}} {{usagedie=@{CUSTOM2USAGEDIE}}} {{usageroll=[[{1d@{CUSTOM2USAGEDIE}}]]}}">
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center"><input class="usageDieEquippedCheckbox" type=checkbox name="attr_CUSTOM_ITEM_3_EQUIPPED"/></td>
+                            <td align="center"><input type=text name="attr_CUSTOM_ITEM_3_NAME"/></td>
+                            <td align="center">
+                                <select class="usageDieSelect" name="attr_CUSTOM3USAGEDIE" value="8">
+                                    <option value="4">d4</option>
+                                    <option value="6">d6</option>
+                                    <option value="8">d8</option>
+                                    <option value="10">d10</option>
+                                    <option value="12">d12</option>
+                                    <option value="20">d20</option>
+                                </select>
+                            </td>        
+                            <td align="center">
+                                <button class="usageRollButton"
+                                    type="roll"
+                                    name="attr_Custom3Usage-roll"
+                                    title="Custom 3 Usage Roll"
+                                    value="&{template:blackhackusage} {{playername=@{NAME}}} {{itemname=@{CUSTOM_ITEM_3_NAME}}} {{usagedie=@{CUSTOM3USAGEDIE}}} {{usageroll=[[{1d@{CUSTOM3USAGEDIE}}]]}}">
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center"><input class="usageDieEquippedCheckbox" type=checkbox name="attr_CUSTOM_ITEM_4_EQUIPPED"/></td>
+                            <td align="center"><input type=text name="attr_CUSTOM_ITEM_4_NAME"/></td>
+                            <td align="center">
+                                <select class="usageDieSelect" name="attr_CUSTOM4USAGEDIE" value="8">
+                                    <option value="4">d4</option>
+                                    <option value="6">d6</option>
+                                    <option value="8">d8</option>
+                                    <option value="10">d10</option>
+                                    <option value="12">d12</option>
+                                    <option value="20">d20</option>
+                                </select>
+                            </td>        
+                            <td align="center">
+                                <button class="usageRollButton"
+                                    type="roll"
+                                    name="attr_Custom4Usage-roll"
+                                    title="Custom 4 Usage Roll"
+                                    value="&{template:blackhackusage} {{playername=@{NAME}}} {{itemname=@{CUSTOM_ITEM_4_NAME}}} {{usagedie=@{CUSTOM4USAGEDIE}}} {{usageroll=[[{1d@{CUSTOM4USAGEDIE}}]]}}">
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td class="gearBox">
+                    <div class="boxHeader">GEAR</div>
+                    <textarea class="gearTextArea" name="attr_GEAR">Put gear here!</textarea>
+                </td>
+            </tr>
+        </table>
     </div>
-  </div>
+    <div class="notesBox">
+        <div class="boxHeader">NOTES</div>
+        <textarea class="notesTextArea" name="attr_NOTES">Type your notes here!</textarea>
+    </div>
 </div>
 
 <rolltemplate class="sheet-rolltemplate-blackhacktest">
